@@ -1,0 +1,60 @@
+<template name="symptoms">
+  <h1>I am a virtual doctor</h1>
+  <h2>Please tell me your issues with key words</h2>
+
+
+  <input type="text" class="js-user-symptoms" placeholder="Enter some symptoms">
+  <br>
+  <button class="js-pusher btn btn-info"> Submit</button>
+  <br><hr>
+  <h2>Learn about symptoms</h2>
+{{> symptoms_rd}}
+
+  <hr>
+  <h2>Other people's symptoms</h2>
+	<ul>
+	{{#each s in symptomsdata}}
+	   {{> symptomsRow  symptom=s}}
+	{{/each}}
+
+    </ul>
+  <br>
+</template>
+
+<template name="symptomsRow">
+	 <li>{{symptom.createdAt}}: {{ symptom.text}} : {{symptom.userEmail}}
+       <span class="js-delete-symptoms glyphicon glyphicon-trash" aria-hidden="true">
+       </span>
+	  </li>
+</template>
+
+<template name="symptoms_rd">
+  <select class="nameList">
+    <option>start to select</option>
+    <option value="cold">cold</option>
+    <option value="hda">headache</option>
+  </select>
+<br>
+{{#if allcold}}
+  <div class="coldall">
+    <ul>
+      <li><a  href="https://en.wikipedia.org/wiki/Common_cold">Know about cold</a></li>
+      <li><a  href="http://www.webmd.com/cold-and-flu/cold-guide/understanding-common-cold-basics">Cold basics</a></li>
+    </ul>
+  </div>
+{{/if}}
+
+{{#if allheadache}}
+  <div class="hdaall">
+    <ul>
+      <li><li><a  href="https://en.wikipedia.org/wiki/Headache">Know about headache</a></li></li>
+      <li><a href="http://www.medicinenet.com/headache/article.htm">headache and cure</a></li>
+    </ul>
+  </div>
+{{/if}}
+
+
+
+
+
+</template>
