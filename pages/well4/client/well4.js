@@ -26,6 +26,14 @@ Template.well4.events({
 
     'click .js-submit': function(event){
         event.preventDefault();
+			  var selected = [];
+			  selected = $('.selectpicker').val();
+				console.log("hey u clicked");
+				const preference=
+				{user:Meteor.userId(), selected: selected};
+				console.log(preference);
+				Meteor.call("submitPreferences", preference);
+				console.log("finished");
         Router.go('/well');
     },
 

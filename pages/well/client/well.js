@@ -5,6 +5,7 @@ Template.well.helpers({
 
   bmiCondition: function(){
     const object = Demographic.findOne();
+		console.log(object);
     if(object.bmi<=21){
       return "Underweight";
     }else if(object.bmi<=27){

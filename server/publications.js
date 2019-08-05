@@ -37,3 +37,12 @@ Meteor.publish("theSettings",function(){
       this.ready();
     }
     ;})
+
+    Meteor.publish("thePreferences",function(){
+      if(this.userId){
+        return Preferences.find({user:this.userId});
+      }
+      else{
+        this.ready();
+      }
+      ;})

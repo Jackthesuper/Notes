@@ -20,6 +20,7 @@
 
   td{
     text-align: center;
+    border-bottom: 1px solid #ddd;
   }
 
   /* Header/logo Title */
@@ -104,6 +105,10 @@
     padding: 20px;
   }
 
+  .gfg {
+                  border-collapse:separate;
+                  border-spacing:0 15px;
+              }
   .op {
     opacity: 0.3;
   }
@@ -296,87 +301,102 @@ button:hover {
 
     </div>
     <div class="main">
-      <table class="table" id="myTable">
+      <table class="table gfg" id="myTable">
         <thead>
           <tr>
-            <th scope="col">Your basket for this week</th>
-            <th scope="col" style="opacity:0.3;">QTY</th>
-            <th scope="col" style="opacity:0.3;">Nutritions:</th>
-            <th scope="col" style="opacity:0.3;">Matches your needs:</th>
-            <th scope="col" style="opacity:0.3;">Covered by:</th>
+            <th scope="col" style="padding: 0px;border: none; text-align: left;"><h4 style="font-weight:bold;">Your basket for this week</h4></th>
+            <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">QTY</h5></th>
+            <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Nutritions:</h5></th>
+            <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Matches your needs:</h5></th>
+            <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Covered by:</h5></th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <!-- <th scope="row">Mark</th> -->
-            <td style="vertical-align:middle;">Chicken zucchini</td>
-            <td style="vertical-align:middle;"><button style="font-size:17px;" data-message=1 class="button button5 js-puller">-</button>
+            <td style="padding: 0px;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+              <img style="height:20%; float:left; width:30%;" src="images/r_s_w_b.jpg">
+              <p style="margin-top: 20px;">Roasted Salmon with garlic and brussel sprouts</p>
+            </td>
+            <td style="padding: 0px;padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=1 class="button button5 js-puller">-</button>
               <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 1}}</span>
               <button style="font-size:17px;" data-message=1 class="button button5 js-pusher">+</button>
             </td>
-            <td style="vertical-align:middle;">
+            <td style="padding: 0px;padding: 0px;vertical-align:middle;">
               <h6>Calories: 200</h6>
               <h6>Protein: 20g</h6>
               <h6>Fat: 7g</h6>
             </td>
-            <td style="vertical-align:middle;"><div class="numberCircle1">94%</div></td>
-            <td style="vertical-align:middle;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px;padding: 0px;vertical-align:middle;"><div class="numberCircle1">94%</div></td>
+            <td style="padding: 0px;padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
           </tr>
           <tr>
-            <td style="vertical-align:middle;">Flat bread with potato</td>
-            <td style="vertical-align:middle;"><button style="font-size:17px;" data-message=2 class="button button5 js-puller">-</button>
+            <td style="padding: 0px;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+              <img style="height:20%; float:left; width:30%;" src="images/c_t_r_s.jpg">
+              <p style="margin-top: 20px;">Chickpea, tomato and brown rice stew</p>
+            </td>
+            <td style="padding: 0px;padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=2 class="button button5 js-puller">-</button>
               <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 2}}</span>
               <button style="font-size:17px;" data-message=2 class="button button5 js-pusher">+</button>
             </td>
-            <td style="vertical-align:middle;">
+            <td style="padding: 0px;padding: 0px;vertical-align:middle;">
               <h6>Calories: 200</h6>
               <h6>Protein: 20g</h6>
               <h6>Fat: 7g</h6>
             </td>
-            <td style="vertical-align:middle;"><div class="numberCircle2">89%</div></td>
-            <td style="vertical-align:middle;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px;vertical-align:middle;"><div class="numberCircle2">89%</div></td>
+            <td style="padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
           </tr>
           <tr>
-            <td style="vertical-align:middle;">Veggie salad</td>
-            <td style="vertical-align:middle;"><button style="font-size:17px;" data-message=3 class="button button5 js-puller">-</button>
+            <td style="padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+              <img style="height:20%; float:left; width:30%;" src="images/a_a_h_f.jpg">
+              <p style="margin-top: 20px;">Asparagus and artichoke heart frittata</p>
+            </td>
+            <td style="padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=3 class="button button5 js-puller">-</button>
               <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 3}}</span>
               <button style="font-size:17px;" data-message=3 class="button button5 js-pusher">+</button>
             </td>
-            <td style="vertical-align:middle;">
+            <td style="padding: 0px;vertical-align:middle;">
               <h6>Calories: 200</h6>
               <h6>Protein: 20g</h6>
               <h6>Fat: 7g</h6>
             </td>
-            <td style="vertical-align:middle;"><div class="numberCircle3">75%</div></td>
-            <td style="vertical-align:middle;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px;vertical-align:middle;"><div class="numberCircle3">75%</div></td>
+            <td style="padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
           </tr>
           <tr>
-            <td style="vertical-align:middle;">Spinach salad</td>
-            <td style="vertical-align:middle;"><button style="font-size:17px;" data-message=4 class="button button5 js-puller">-</button>
+            <td style="padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+              <img style="height:20%; float:left; width:30%;" src="images/z_n_t_b.jpg">
+              <p style="margin-top: 20px;">Zucchini noodles with turkey Bolognese</p>
+            </td>
+            <td style="padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=4 class="button button5 js-puller">-</button>
               <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 4}}</span>
               <button style="font-size:17px;" data-message=4 class="button button5 js-pusher">+</button>
             </td>
-            <td style="vertical-align:middle;">
+            <td style="padding: 0px;vertical-align:middle;">
               <h6>Calories: 200</h6>
               <h6>Protein: 20g</h6>
               <h6>Fat: 7g</h6>
             </td>
-            <td style="vertical-align:middle;"><div class="numberCircle1">91%</div></td>
-            <td style="vertical-align:middle;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px;vertical-align:middle;"><div class="numberCircle1">91%</div></td>
+            <td style="padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
           </tr>
           <tr>
-            <td style="vertical-align:middle;">Chicken broccoli</td>
-            <td style="vertical-align:middle;"><button style="font-size:17px;" data-message=5 class="button button5 js-puller">-</button>
+            <td style="padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+              <img style="height:20%; float:left; width:30%;" src="images/v_c_w_s_p.jpg">
+              <p style="margin-top: 20px;">Veg. chill with sweet potato and black beans</p>
+            </td>
+            <td style="padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=5 class="button button5 js-puller">-</button>
               <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 5}}</span>
               <button style="font-size:17px;" data-message=5 class="button button5 js-pusher">+</button>
             </td>
-            <td style="vertical-align:middle;">
+            <td style="padding: 0px;vertical-align:middle;">
               <h6>Calories: 200</h6>
               <h6>Protein: 20g</h6>
               <h6>Fat: 7g</h6>
             </td>
-            <td style="vertical-align:middle;"><div class="numberCircle1">90%</div></td>
-            <td style="vertical-align:middle;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px;vertical-align:middle;"><div class="numberCircle1">90%</div></td>
+            <td style="padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
           </tr>
         </tbody>
       </table>
@@ -384,9 +404,9 @@ button:hover {
         <h5 style="display:inline;padding-right:40px;border-right:1px solid grey;">You selected <span style="color:#20B2AA;">{{theTotal}}
         </span> meals-you are eligible for <span style="color:#20B2AA;">{{theRest}} more</span>, estimated delivery
         <span style="color:#20B2AA;">07/30/2019</span></h5>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <h5 style="display:inline;opacity:0.5;">Total cost:$0</h5>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button class="button button3 js-place-order" style="display:inline">Place your order</button>
       </footer>
     </div>
