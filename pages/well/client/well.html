@@ -103,7 +103,7 @@
   .progress-bar-info{
     background-color: #20b2aa;
   }
-  
+
   .button4 {
     background-color: #20B2AA;
     color: white;
@@ -145,6 +145,113 @@
       width: 100%;
     }
   }
+
+  .cb {
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  -font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cb input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 15px;
+  background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cb input:checked ~ .checkmark {
+  background-color: #20B2AA;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.cb input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.cb .checkmark:after {
+  left: 5px;
+  top: 4px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.cb2 {
+display: block;
+position: relative;
+padding-left: 15px;
+margin-bottom: 15px;
+cursor: pointer;
+-font-size: 14px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cb2 input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cb2 input:checked ~ .checkmark {
+background-color: #ff9800;
+}
+
+/* Show the checkmark when checked */
+.cb2 input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the checkmark/indicator */
+.cb2 .checkmark:after {
+left: 5px;
+top: 4px;
+width: 5px;
+height: 8px;
+border: solid white;
+border-width: 0 3px 3px 0;
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+}
   </style>
   </head>
   <body>
@@ -198,15 +305,15 @@
         <span class="glyphicon glyphicon-user text-success" aria-hidden="true"></span>  Demographic Data    &nbsp;&nbsp;&nbsp;&nbsp;
         <span class="op2 js-edit-demographic" style="cursor:pointer;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  Edit</span>
       </h5>
-      <h4><span class="label label-success">Male</span> <span class="label label-success">Overweight/ BMI 27</span></h4>
-      <h4><span class="label label-success">Age 72</span> <span class="label label-success">Living alone</span></h4><br>
+      <h4><span class="label label-success">Male</span> <span class="label label-success">{{bmiCondition}}/ BMI {{demographic.bmi}}</span></h4>
+      <h4><span class="label label-success">Age 72</span> <span class="label label-success">{{demographic.household}}</span></h4><br>
       <h5>
         <span class="glyphicon glyphicon-plus text-primary" aria-hidden="true"></span>  Clinical Needs
       </h5>
       <h4><span class="label label-primary">Diabetes</span> <span class="label label-primary">High blood pressure</span></h4>
       <h4><span class="label label-primary">High cholesterol</span> <span class="label label-primary">Depression</span></h4><br>
       <h5>
-        <span class="glyphicon glyphicon-heart text-info" aria-hidden="true"></span>  Prefernces   &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="glyphicon glyphicon-heart text-info" aria-hidden="true"></span>  Preferences   &nbsp;&nbsp;&nbsp;&nbsp;
         <span class="op2 js-edit-preference" style="cursor:pointer;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  Edit</span>
       </h5>
       <h4>
@@ -248,48 +355,93 @@
                         <tbody>
                           <tr>
                             <td>Serving size</td>
-                            <td>15g</td>
-                            <td>@mdo</td>
+                            <td>150g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                           <tr>
                             <td>Total calories</td>
                             <td>200cal</td>
-                            <td>@mdo</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                           <tr>
                             <td>Protein</td>
                             <td>50g</td>
-                            <td>@mdo</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                           <tr>
                             <td>Fats</td>
                             <td>32g</td>
-                            <td>@mdo</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                           <tr>
                             <td>Sugars</td>
                             <td>2g</td>
-                            <td>@mdo</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                           <tr>
                             <td>Fiber</td>
                             <td>17g</td>
-                            <td>@mdo</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                           <tr>
                             <td>Cholesterol</td>
                             <td>0g</td>
-                            <td>@mdo</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                           <tr>
                             <td>Sodium</td>
                             <td>2g</td>
-                            <td>@mdo</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                           <tr>
                             <td>Micronutrients</td>
                             <td>-</td>
-                            <td>@mdo</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -344,47 +496,92 @@
                                   <tr>
                                     <td>Serving size</td>
                                     <td>150g</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td>Total calories</td>
                                     <td>200cal</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td>Protein</td>
                                     <td>50g</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb2">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td>Fats</td>
                                     <td>32g</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td>Sugars</td>
                                     <td>2g</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td>Fiber</td>
                                     <td>17g</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td>Cholesterol</td>
                                     <td>0g</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb2">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td>Sodium</td>
                                     <td>2g</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb2">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                   <tr>
                                     <td>Micronutrients</td>
                                     <td>-</td>
-                                    <td>@mdo</td>
+                                    <td>
+                                      <label class="cb">
+                                      <input type="checkbox" checked="checked" onclick="return false;">
+                                      <span class="checkmark"></span>
+                                      </label>
+                                    </td>
                                   </tr>
                                 </tbody>
                               </table>
