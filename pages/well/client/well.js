@@ -3,6 +3,15 @@ Template.well.helpers({
 		return Demographic.findOne();
 	},
 
+	'preference': function(){
+		console.log(Preferences.findOne().selected);
+		return Preferences.findOne().selected[0];
+	},
+
+	'preference2': function(){
+		return Preferences.findOne().selected[1];
+	},
+
   bmiCondition: function(){
     const object = Demographic.findOne();
 		console.log(object);
