@@ -3,6 +3,7 @@
   <title>Page Title</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
   * {
     box-sizing: border-box;
@@ -14,6 +15,13 @@
     margin: 0;
   }
 
+  .checked {
+    color: orange;
+  }
+
+  .unchecked{
+    color: lightgrey;
+  }
   /* Header/logo Title */
   .header {
     padding: 60px;
@@ -79,6 +87,11 @@
     padding: 20px;
   }
 
+  .meal {
+    height: 270px;
+    border: 1px solid #ddd;
+  }
+
   /* Fake image, just for this example */
   .fakeimg {
     background-color: #aaa;
@@ -92,6 +105,12 @@
 
   .op2{
     opacity: 0.5;
+  }
+
+  .op3{
+    opacity: 0.5;
+    display: inline-block;
+    margin-right: 5px;
   }
 
   .progress-title{
@@ -111,6 +130,18 @@
     margin: 8px 0;
     border: none;
     border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .button5 {
+    background-color: #20B2AA;
+    color: white;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     cursor: pointer;
     width: 100%;
   }
@@ -334,7 +365,63 @@ transform: rotate(45deg);
       <div class="row">
         <div class="col-lg-4">
           <!-- Trigger the modal with a button -->
-          <button type="button" style="padding:0px;" data-toggle="modal" data-target="#myModal"><img style="height:200px; width:100%" src="images/r_s_w_b.jpg"></button>
+          <div class="meal" style="text-align:center;">
+            <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal">
+              <img style="height:130px;" src="images/r_s_w_b.jpg">
+              <h4>Roasted Salmon with garlic and brussel sprouts</h4>
+            </button>
+            <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 6px;">
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;">
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Calories: 200 </span>
+                </div>
+                <div class="col-sm-1" style="padding:0px;">
+                  <label class="cb">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Sodium: 5g </span>
+                </div>
+                <div class="col-sm-1" style="padding: 0px;">
+                  <label class="cb2">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;">
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Protein: 20g </span>
+                </div>
+                <div class="col-sm-1" style="padding:0px;">
+                  <label class="cb">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Fat: 7g </span>
+                </div>
+                <div class="col-sm-1" style="padding: 0px;">
+                  <label class="cb2">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;margin-top:5px;">
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
+                  <span class="op2" style="margin-left:97px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
+              </div>
+            </div>
+            <button class="button button5" type="button">Add to basket</button>
+          </div>
           <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 
           <!-- Modal -->
@@ -346,9 +433,50 @@ transform: rotate(45deg);
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                  <div class = "row">
+                  <div class = "row" style="font-size: 12px;">
                     <div class = "col-sm-5">
-                      <img style="height:200px; width:100%" src="images/r_s_w_b.jpg">
+                      <img style="height:150px; width:95%" src="images/z_n_t_b.jpg">
+                      <h4 style="width:95%;">Zucchini noodles with turkey Bolognese</h4>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Rating
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Your Rating
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Prep time
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="op2">2 min</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Vendor
+                        </div>
+                        <div class="col-sm-7">
+                          <span class="op2">Meals on Wheels</span>
+                        </div>
+                      </div>
                     </div>
                     <div class = "col-sm-7">
                       <table class="table table-striped">
@@ -454,15 +582,442 @@ transform: rotate(45deg);
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="fakeimg" style="height:200px;">Image</div>
+          <!-- Trigger the modal with a button -->
+          <div class="meal" style="text-align:center;">
+            <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal2">
+              <img style="height:130px;" src="images/z_n_t_b.jpg">
+              <h4>Zucchini noodles with turkey Bolognese</h4>
+            </button>
+            <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 6px;">
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;">
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Calories: 200 </span>
+                </div>
+                <div class="col-sm-1" style="padding:0px;">
+                  <label class="cb">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Sodium: 5g </span>
+                </div>
+                <div class="col-sm-1" style="padding: 0px;">
+                  <label class="cb2">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;">
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Protein: 20g </span>
+                </div>
+                <div class="col-sm-1" style="padding:0px;">
+                  <label class="cb">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Fat: 7g </span>
+                </div>
+                <div class="col-sm-1" style="padding: 0px;">
+                  <label class="cb2">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;margin-top:5px;">
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
+                  <span class="op2" style="margin-left:97px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
+              </div>
+            </div>
+            <button class="button button5" type="button">Add to basket</button>
+          </div>
+          <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+          <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class = "row" style="font-size: 12px;">
+                    <div class = "col-sm-5">
+                      <img style="height:150px; width:95%" src="images/z_n_t_b.jpg">
+                      <h4 style="width:95%;">Zucchini noodles with turkey Bolognese</h4>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Rating
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Your Rating
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Prep time
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="op2">2 min</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Vendor
+                        </div>
+                        <div class="col-sm-7">
+                          <span class="op2">Meals on Wheels</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class = "col-sm-7">
+                      <table class="table table-striped">
+                        <tbody>
+                          <tr>
+                            <td>Serving size</td>
+                            <td>150g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Total calories</td>
+                            <td>200cal</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Protein</td>
+                            <td>50g</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Fats</td>
+                            <td>32g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Sugars</td>
+                            <td>2g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Fiber</td>
+                            <td>17g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Cholesterol</td>
+                            <td>0g</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Sodium</td>
+                            <td>2g</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Micronutrients</td>
+                            <td>-</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
         <div class="col-lg-4">
-          <div class="fakeimg" style="height:200px;">Image</div>
+          <!-- Trigger the modal with a button -->
+          <div class="meal" style="text-align:center;">
+            <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal3">
+              <img style="height:130px;" src="images/v_c_w_s_p.jpg">
+              <h4>Veg. chili with sweet potato and black beans</h4>
+            </button>
+            <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 6px;">
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;">
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Calories: 200 </span>
+                </div>
+                <div class="col-sm-1" style="padding:0px;">
+                  <label class="cb">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Sodium: 5g </span>
+                </div>
+                <div class="col-sm-1" style="padding: 0px;">
+                  <label class="cb2">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;">
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Protein: 20g </span>
+                </div>
+                <div class="col-sm-1" style="padding:0px;">
+                  <label class="cb">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-sm-5" style="padding: 0px;">
+                  <span class="op3">Fat: 7g </span>
+                </div>
+                <div class="col-sm-1" style="padding: 0px;">
+                  <label class="cb2">
+                  <input type="checkbox" checked="checked" onclick="return false;">
+                  <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="row" style="font-size:smaller; margin-left:0px; margin-right:0px;margin-top:5px;">
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star checked" style="margin-top:1px;"></span>
+                  <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
+                  <span class="op2" style="margin-left:97px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 3 min</span>
+              </div>
+            </div>
+            <button class="button button5" type="button">Add to basket</button>
+          </div>
+          <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
+
+          <!-- Modal -->
+          <div id="myModal3" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class = "row" style="font-size: 12px;">
+                    <div class = "col-sm-5">
+                      <img style="height:150px; width:95%" src="images/v_c_w_s_p.jpg">
+                      <h4 style="width:95%;">Veg. chili with sweet potato and black beans</h4>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Rating
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star unchecked"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Your Rating
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star checked"></span>
+                          <span class="fa fa-star unchecked"></span>
+                          <span class="fa fa-star unchecked"></span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Prep time
+                        </div>
+                        <div class="col-sm-6">
+                          <span class="op2">2 min</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-5">
+                          Vendor
+                        </div>
+                        <div class="col-sm-7">
+                          <span class="op2">Meals on Wheels</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class = "col-sm-7">
+                      <table class="table table-striped">
+                        <tbody>
+                          <tr>
+                            <td>Serving size</td>
+                            <td>150g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Total calories</td>
+                            <td>200cal</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Protein</td>
+                            <td>50g</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Fats</td>
+                            <td>32g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Sugars</td>
+                            <td>2g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Fiber</td>
+                            <td>17g</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Cholesterol</td>
+                            <td>0g</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Sodium</td>
+                            <td>2g</td>
+                            <td>
+                              <label class="cb2">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Micronutrients</td>
+                            <td>-</td>
+                            <td>
+                              <label class="cb">
+                              <input type="checkbox" checked="checked" onclick="return false;">
+                              <span class="checkmark"></span>
+                              </label>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      <br>
+      <br><br><br>
       <div class="row">
       <div class="col-lg-offset-1 col-lg-10"><h4>Meal - Kits</h4></div></div>
       <div class="row">
@@ -474,7 +1029,7 @@ transform: rotate(45deg);
               <div class="row">
                 <div class="col-lg-4">
                   <!-- Trigger the modal with a button -->
-                  <button type="button" style="padding:0px;" data-toggle="modal" data-target="#myModal"><img style="height:200px; width:100%" src="images/r_s_w_b.jpg"></button>
+                  <button type="button" style="padding:0px;" data-toggle="modal" data-target="#myModal"><img style="height:150px; width:100%" src="images/c_t_r_s.jpg"></button>
                   <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 
                   <!-- Modal -->
@@ -488,7 +1043,7 @@ transform: rotate(45deg);
                         <div class="modal-body">
                           <div class = "row">
                             <div class = "col-sm-5">
-                              <img style="height:200px; width:100%" src="images/r_s_w_b.jpg">
+                              <img style="height:200px; width:100%" src="images/c_t_r_s.jpg">
                             </div>
                             <div class = "col-sm-7">
                               <table class="table table-striped">
@@ -594,24 +1149,10 @@ transform: rotate(45deg);
                   </div>
                 </div>
                 <div class="col-lg-4">
-                  <div class="fakeimg" style="height:200px;">Image</div>
+                  <img style="height:150px; width:100%" src="images/r_r_v_o_l.jpg">
                 </div>
                 <div class="col-lg-4">
-                  <div class="fakeimg" style="height:200px;">Image</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="item">
-              <div class="row">
-                <div class="col-lg-4">
-                  <div class="fakeimg" style="height:200px;">Image</div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="fakeimg" style="height:200px;">Image</div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="fakeimg" style="height:200px;">Image</div>
+                  <img style="height:150px; width:100%" src="images/a_a_h_f.jpg">
                 </div>
               </div>
             </div>
@@ -619,13 +1160,27 @@ transform: rotate(45deg);
             <div class="item">
               <div class="row">
                 <div class="col-lg-4">
-                  <div class="fakeimg" style="height:200px;">Image</div>
+                  <div class="fakeimg" style="height:150px;">Image</div>
                 </div>
                 <div class="col-lg-4">
-                  <div class="fakeimg" style="height:200px;">Image</div>
+                  <div class="fakeimg" style="height:150px;">Image</div>
                 </div>
                 <div class="col-lg-4">
-                  <div class="fakeimg" style="height:200px;">Image</div>
+                  <div class="fakeimg" style="height:150px;">Image</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="fakeimg" style="height:150px;">Image</div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="fakeimg" style="height:150px;">Image</div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="fakeimg" style="height:150px;">Image</div>
                 </div>
               </div>
             </div>
