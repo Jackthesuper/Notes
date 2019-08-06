@@ -10,7 +10,7 @@ Template.login.events({
             window.alert(error.reason);
             return;
           }else{
-            Router.go('/well');
+            Router.go('/well6');
           }
         });
     },
