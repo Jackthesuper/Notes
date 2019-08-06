@@ -117,6 +117,11 @@
     opacity: 0.5;
   }
 
+  .random{
+    border:1px solid lightgrey;
+    padding:5px 8px;
+    border-radius: 3px;
+  }
   .progress-title{
   float: left;
   line-height: 3px;
@@ -208,7 +213,10 @@ button:hover {
     color: white;
     display: inline-block;
 }
-
+.flexWay{
+  display: flex;
+  flex-direction: column;
+}
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 700px) {
     .row {
@@ -319,7 +327,7 @@ button:hover {
               <p style="margin-top: 20px;">Roasted Salmon with garlic and brussel sprouts</p>
             </td>
             <td style="padding: 0px;padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=1 class="button button5 js-puller">-</button>
-              <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 1}}</span>
+              <span class="random">{{theCounter 1}}</span>
               <button style="font-size:17px;" data-message=1 class="button button5 js-pusher">+</button>
             </td>
             <td style="padding: 0px;padding: 0px;vertical-align:middle;">
@@ -328,7 +336,12 @@ button:hover {
               <h6>Fat: 7g</h6>
             </td>
             <td style="padding: 0px;padding: 0px;vertical-align:middle;"><div class="numberCircle1">94%</div></td>
-            <td style="padding: 0px;padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px;padding: 0px; border-right: 1px solid #ddd;">
+              <div class="flexWay">
+                <button type="button" class="close" style="text-align:right;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </div>
+            </td>
           </tr>
           <tr>
             <td style="padding: 0px;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
@@ -336,7 +349,7 @@ button:hover {
               <p style="margin-top: 20px;">Chickpea, tomato and brown rice stew</p>
             </td>
             <td style="padding: 0px;padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=2 class="button button5 js-puller">-</button>
-              <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 2}}</span>
+              <span class="random">{{theCounter 2}}</span>
               <button style="font-size:17px;" data-message=2 class="button button5 js-pusher">+</button>
             </td>
             <td style="padding: 0px;padding: 0px;vertical-align:middle;">
@@ -345,7 +358,12 @@ button:hover {
               <h6>Fat: 7g</h6>
             </td>
             <td style="padding: 0px;vertical-align:middle;"><div class="numberCircle2">89%</div></td>
-            <td style="padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px; border-right: 1px solid #ddd;">
+              <div class="flexWay">
+                <button type="button" class="close" style="text-align:right;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </div>
+            </td>
           </tr>
           <tr>
             <td style="padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
@@ -353,7 +371,7 @@ button:hover {
               <p style="margin-top: 20px;">Asparagus and artichoke heart frittata</p>
             </td>
             <td style="padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=3 class="button button5 js-puller">-</button>
-              <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 3}}</span>
+              <span class="random">{{theCounter 3}}</span>
               <button style="font-size:17px;" data-message=3 class="button button5 js-pusher">+</button>
             </td>
             <td style="padding: 0px;vertical-align:middle;">
@@ -362,7 +380,12 @@ button:hover {
               <h6>Fat: 7g</h6>
             </td>
             <td style="padding: 0px;vertical-align:middle;"><div class="numberCircle3">75%</div></td>
-            <td style="padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px; border-right: 1px solid #ddd;">
+              <div class="flexWay">
+                <button type="button" class="close" style="text-align:right;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </div>
+            </td>
           </tr>
           <tr>
             <td style="padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
@@ -370,7 +393,7 @@ button:hover {
               <p style="margin-top: 20px;">Zucchini noodles with turkey Bolognese</p>
             </td>
             <td style="padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=4 class="button button5 js-puller">-</button>
-              <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 4}}</span>
+              <span class="random">{{theCounter 4}}</span>
               <button style="font-size:17px;" data-message=4 class="button button5 js-pusher">+</button>
             </td>
             <td style="padding: 0px;vertical-align:middle;">
@@ -379,7 +402,12 @@ button:hover {
               <h6>Fat: 7g</h6>
             </td>
             <td style="padding: 0px;vertical-align:middle;"><div class="numberCircle1">91%</div></td>
-            <td style="padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px; border-right: 1px solid #ddd;">
+              <div class="flexWay">
+                <button type="button" class="close" style="text-align:right;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </div>
+            </td>
           </tr>
           <tr>
             <td style="padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
@@ -387,7 +415,7 @@ button:hover {
               <p style="margin-top: 20px;">Veg. chill with sweet potato and black beans</p>
             </td>
             <td style="padding: 0px;vertical-align:middle;"><button style="font-size:17px;" data-message=5 class="button button5 js-puller">-</button>
-              <span style="border:1px solid black;padding:3px;" class="random">{{theCounter 5}}</span>
+              <span class="random">{{theCounter 5}}</span>
               <button style="font-size:17px;" data-message=5 class="button button5 js-pusher">+</button>
             </td>
             <td style="padding: 0px;vertical-align:middle;">
@@ -396,7 +424,12 @@ button:hover {
               <h6>Fat: 7g</h6>
             </td>
             <td style="padding: 0px;vertical-align:middle;"><div class="numberCircle1">90%</div></td>
-            <td style="padding: 0px; border-right: 1px solid #ddd;"><button type="button" class="close">&times;</button></td>
+            <td style="padding: 0px; border-right: 1px solid #ddd;">
+              <div class="flexWay">
+                <button type="button" class="close" style="text-align:right;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
