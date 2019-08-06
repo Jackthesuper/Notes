@@ -134,7 +134,7 @@
     width: 100%;
   }
 
-  .button5 {
+  .button6 {
     background-color: #20B2AA;
     color: white;
     padding: 10px;
@@ -144,6 +144,12 @@
     border-bottom-right-radius: 15px;
     cursor: pointer;
     width: 100%;
+  }
+
+  .button7{
+    background-color: #20b2aa;
+    border: none;
+
   }
 
   .modal-body {
@@ -420,7 +426,15 @@ transform: rotate(45deg);
                   <span class="op2" style="margin-left:97px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
               </div>
             </div>
-            <button class="button button5" type="button">Add to basket</button>
+            {{#if theCounter 1}}
+          	<button class="button button6 js-add-basket" data-message=1 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
+            {{else}}
+          	<button class="button button6" type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> In your basket
+            <button class="button button7 js-minus-basket" data-message=1>-</button>
+              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 1}}</span>
+              <button class="button button7 js-add-basket" data-message=1>+</button>
+            </button>
+            {{/if}}
           </div>
           <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 
@@ -435,8 +449,8 @@ transform: rotate(45deg);
                 <div class="modal-body">
                   <div class = "row" style="font-size: 12px;">
                     <div class = "col-sm-5">
-                      <img style="height:150px; width:95%" src="images/z_n_t_b.jpg">
-                      <h4 style="width:95%;">Zucchini noodles with turkey Bolognese</h4>
+                      <img style="height:150px; width:95%" src="images/r_s_w_b.jpg">
+                      <h4 style="width:95%;">Roasted Salmon with garlic and brussel sprouts</h4>
                       <div class="row">
                         <div class="col-sm-5">
                           Rating
@@ -638,7 +652,15 @@ transform: rotate(45deg);
                   <span class="op2" style="margin-left:97px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
               </div>
             </div>
-            <button class="button button5" type="button">Add to basket</button>
+            {{#if theCounter 2}}
+          	<button class="button button6 js-add-basket" data-message=2 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
+            {{else}}
+          	<button class="button button6" type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> In your basket
+            <button class="button button7 js-minus-basket" data-message=2>-</button>
+              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 2}}</span>
+              <button class="button button7 js-add-basket" data-message=2>+</button>
+            </button>
+            {{/if}}
           </div>
           <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 
@@ -855,7 +877,15 @@ transform: rotate(45deg);
                   <span class="op2" style="margin-left:97px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 3 min</span>
               </div>
             </div>
-            <button class="button button5" type="button">Add to basket</button>
+            {{#if theCounter 3}}
+          	<button class="button button6 js-add-basket" data-message=3 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
+            {{else}}
+          	<button class="button button6" type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> In your basket
+            <button class="button button7 js-minus-basket" data-message=3>-</button>
+              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 3}}</span>
+              <button class="button button7 js-add-basket" data-message=3>+</button>
+            </button>
+            {{/if}}
           </div>
           <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 
