@@ -1,5 +1,5 @@
 Template.login.events({
-    'submit form': function(event){
+    'click .js-login-submit': function(event){
         event.preventDefault();
         const username = $(".js-login-uname").val();
         const password = $(".js-login-psw").val();

@@ -4,12 +4,21 @@ Template.well.onCreated(function() {
     counter1: 0,
 		counter2: 1,
 		counter3: 0,
+    counter4: 0,
+    counter5: 0,
+    counter6: 0,
 		total: 1,
   });
   console.dir(this.state);
 });
 
 Template.well.helpers({
+  theTotal: function(){
+    const instance = Template.instance();
+    const c = instance.state.get("total");
+    return c;
+  },
+
 	theCounterNumber: function(digit){
     const instance = Template.instance();
     const c = instance.state.get("counter"+digit);

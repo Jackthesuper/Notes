@@ -481,7 +481,7 @@ transform: rotate(45deg);
         <span class="label label-info">Plant-based <span class="glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
       </h4><br>
 
-      <h4>Your weekly selection: <span class="op2" style="float:right;">7/10</span></h4>
+      <h4>Your weekly selection: <span class="op2" style="float:right;">{{theTotal}}/10</span></h4>
       <button class="button button4 js-go-basket" style="display:inline"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Review your basket</button>
 
     </div>
@@ -1225,13 +1225,13 @@ transform: rotate(45deg);
                   <span class="op2" style="margin-left:79px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
               </div>
             </div>
-            {{#if theCounter 1}}
-          	<button class="button button6 js-add-basket" data-message=1 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
+            {{#if theCounter 4}}
+          	<button class="button button6 js-add-basket" data-message=4 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
             {{else}}
           	<button class="button button6" type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> In your basket
-            <button class="button button7 js-minus-basket" data-message=1>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 1}}</span>
-              <button class="button button7 js-add-basket" data-message=1>+</button>
+            <button class="button button7 js-minus-basket" data-message=4>-</button>
+              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 4}}</span>
+              <button class="button button7 js-add-basket" data-message=4>+</button>
             </button>
             {{/if}}
           </div>
@@ -1451,13 +1451,13 @@ transform: rotate(45deg);
                   <span class="op2" style="margin-left:79px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
               </div>
             </div>
-            {{#if theCounter 2}}
-          	<button class="button button6 js-add-basket" data-message=2 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
+            {{#if theCounter 5}}
+          	<button class="button button6 js-add-basket" data-message=5 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
             {{else}}
           	<button class="button button6" type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> In your basket
-            <button class="button button7 js-minus-basket" data-message=2>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 2}}</span>
-              <button class="button button7 js-add-basket" data-message=2>+</button>
+            <button class="button button7 js-minus-basket" data-message=5>-</button>
+              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 5}}</span>
+              <button class="button button7 js-add-basket" data-message=5>+</button>
             </button>
             {{/if}}
           </div>
@@ -1676,13 +1676,13 @@ transform: rotate(45deg);
                   <span class="op2" style="margin-left:79px"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 3 min</span>
               </div>
             </div>
-            {{#if theCounter 3}}
-          	<button class="button button6 js-add-basket" data-message=3 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
+            {{#if theCounter 6}}
+          	<button class="button button6 js-add-basket" data-message=6 type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to basket</button>
             {{else}}
           	<button class="button button6" type="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> In your basket
-            <button class="button button7 js-minus-basket" data-message=3>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 3}}</span>
-              <button class="button button7 js-add-basket" data-message=3>+</button>
+            <button class="button button7 js-minus-basket" data-message=6>-</button>
+              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 6}}</span>
+              <button class="button button7 js-add-basket" data-message=6>+</button>
             </button>
             {{/if}}
           </div>
