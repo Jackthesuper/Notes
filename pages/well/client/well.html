@@ -161,12 +161,24 @@
   .carousel-control.left {
   margin-left: -50px;
   width: 5%;
+  background-image: none;
 }
 
 .carousel-control.right {
   margin-right: -50px;
   width: 5%;
+  background-image: none;
 }
+
+  .glyphicon-chevron-left{
+    background-color: grey;
+    border-radius: 50px;
+  }
+
+  .glyphicon-chevron-right{
+    background-color: grey;
+    border-radius: 50px;
+  }
 
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 700px) {
@@ -474,6 +486,121 @@ transform: rotate(45deg);
 
     </div>
     <div class="main">
+      <!-- Modal -->
+      <div id="myModal4" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <div class = "row">
+                <div class = "col-sm-5">
+                  <img style="height:200px; width:100%" src="images/c_t_r_s.jpg">
+                </div>
+                <div class = "col-sm-7">
+                  <table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td>Serving size</td>
+                        <td>150g</td>
+                        <td>
+                          <label class="cb">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Total calories</td>
+                        <td>200cal</td>
+                        <td>
+                          <label class="cb">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Protein</td>
+                        <td>50g</td>
+                        <td>
+                          <label class="cb2">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Fats</td>
+                        <td>32g</td>
+                        <td>
+                          <label class="cb">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Sugars</td>
+                        <td>2g</td>
+                        <td>
+                          <label class="cb">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Fiber</td>
+                        <td>17g</td>
+                        <td>
+                          <label class="cb">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Cholesterol</td>
+                        <td>0g</td>
+                        <td>
+                          <label class="cb2">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Sodium</td>
+                        <td>2g</td>
+                        <td>
+                          <label class="cb2">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Micronutrients</td>
+                        <td>-</td>
+                        <td>
+                          <label class="cb">
+                          <input type="checkbox" checked="checked" onclick="return false;">
+                          <span class="checkmark"></span>
+                          </label>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
       <h4>Prepared Meals</h4>
       <div class="row">
         <div class="col-lg-4">
@@ -1166,124 +1293,10 @@ transform: rotate(45deg);
               <div class="row">
                 <div class="col-lg-4">
                   <!-- Trigger the modal with a button -->
-                  <button type="button" style="padding:0px;" data-toggle="modal" data-target="#myModal"><img style="height:150px; width:100%" src="images/c_t_r_s.jpg"></button>
+                  <button type="button" style="padding:0px;" data-toggle="modal" data-target="#myModal4"><img style="height:150px; width:100%" src="images/c_t_r_s.jpg"></button>
                   <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button> -->
 
-                  <!-- Modal -->
-                  <div id="myModal" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                          <div class = "row">
-                            <div class = "col-sm-5">
-                              <img style="height:200px; width:100%" src="images/c_t_r_s.jpg">
-                            </div>
-                            <div class = "col-sm-7">
-                              <table class="table table-striped">
-                                <tbody>
-                                  <tr>
-                                    <td>Serving size</td>
-                                    <td>150g</td>
-                                    <td>
-                                      <label class="cb">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Total calories</td>
-                                    <td>200cal</td>
-                                    <td>
-                                      <label class="cb">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Protein</td>
-                                    <td>50g</td>
-                                    <td>
-                                      <label class="cb2">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Fats</td>
-                                    <td>32g</td>
-                                    <td>
-                                      <label class="cb">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Sugars</td>
-                                    <td>2g</td>
-                                    <td>
-                                      <label class="cb">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Fiber</td>
-                                    <td>17g</td>
-                                    <td>
-                                      <label class="cb">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Cholesterol</td>
-                                    <td>0g</td>
-                                    <td>
-                                      <label class="cb2">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Sodium</td>
-                                    <td>2g</td>
-                                    <td>
-                                      <label class="cb2">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>Micronutrients</td>
-                                    <td>-</td>
-                                    <td>
-                                      <label class="cb">
-                                      <input type="checkbox" checked="checked" onclick="return false;">
-                                      <span class="checkmark"></span>
-                                      </label>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
 
-                    </div>
-                  </div>
                 </div>
                 <div class="col-lg-4">
                   <img style="height:150px; width:100%" src="images/r_r_v_o_l.jpg">
@@ -1325,11 +1338,11 @@ transform: rotate(45deg);
 
           <!-- Left and right controls -->
           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="font-size:25px;width:28px;height:28px;"></span>
             <span class="sr-only">Previous</span>
           </a>
           <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size:25px;width:28px;height:28px;"></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
