@@ -5,7 +5,8 @@
     "start": "meteor run",
     "test": "meteor test --once --driver-package meteortesting:mocha",
     "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
-    "visualize": "meteor --production --extra-packages bundle-visualizer"
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "build": "meteor build --output public"
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
@@ -16,6 +17,7 @@
     "jquery": "^3.4.1",
     "load-grunt-tasks": "^5.1.0",
     "meteor-node-stubs": "^0.4.1",
+    "meteor-now": "^0.8.0",
     "popper.js": "^1.15.0"
   },
   "devDependencies": {
