@@ -16,7 +16,17 @@ Template.register.events({
             window.alert(error.reason);
             return;
           }else{
-            Router.go('/');
+            const meals = {
+              user: Meteor.userId(),
+              zn: 0,
+              sa: 0,
+              vc: 0,
+              ct: 0,
+              rv: 0,
+              aa: 0
+            }
+            Meteor.call("insertMeals", meals);
+            Router.go('/well6');
           }
         });
     }

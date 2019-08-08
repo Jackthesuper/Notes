@@ -46,3 +46,11 @@ Meteor.publish("theSettings",function(){
         this.ready();
       }
       ;})
+      Meteor.publish("theMeals",function(){
+        if(this.userId){
+          return Meals.find({user:this.userId});
+        }
+        else{
+          this.ready();
+        }
+        ;})

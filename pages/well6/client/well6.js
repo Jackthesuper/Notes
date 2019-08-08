@@ -1,4 +1,10 @@
 Template.well6.helpers({
+	'mealsTotal': function(){
+		const obj = Meals.findOne();
+		const total = obj.zn+obj.sa+obj.vc+obj.ct+obj.rv+obj.aa;
+		return total;
+	},
+
 	'demographic': function(){
 		return Demographic.findOne();
 	},
@@ -37,5 +43,5 @@ Template.well6.events({
       event.preventDefault();
       Router.go('/well');
   },
-  
+
 });
