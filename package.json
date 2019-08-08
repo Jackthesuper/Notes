@@ -16,6 +16,7 @@
     "grunt": "^1.0.4",
     "jquery": "^3.4.1",
     "load-grunt-tasks": "^5.1.0",
+    "mem": "^5.1.1",
     "meteor-node-stubs": "^0.4.1",
     "meteor-now": "^0.8.0",
     "popper.js": "^1.15.0"
