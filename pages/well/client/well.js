@@ -2,12 +2,12 @@ Template.well.onCreated(function() {
   this.state = new ReactiveDict();
   this.state.setDefault({
     counter1: 0,
-		counter2: 1,
+		counter2: 0,
 		counter3: 0,
     counter4: 0,
     counter5: 0,
     counter6: 0,
-		total: 1,
+		total: 0,
   });
   console.dir(this.state);
 });

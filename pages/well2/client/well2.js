@@ -1,12 +1,12 @@
 Template.well2.onCreated(function() {
   this.state = new ReactiveDict();
   this.state.setDefault({
-    counter1:2,
-    counter2:1,
-    counter3:1,
+    counter1:0,
+    counter2:0,
+    counter3:0,
     counter4:0,
-    counter5:1,
-    total:5,
+    counter5:0,
+    total:0,
   });
   console.log("creating the template");
   console.dir(this.state);
@@ -41,7 +41,7 @@ Template.well2.helpers({
 	'preference2': function(){
 		return Preferences.findOne().selected[1];
 	},
-  
+
   bmiCondition: function(){
     const object = Demographic.findOne();
     if(object.bmi<=21){
