@@ -44,4 +44,9 @@ Template.well6.events({
       Router.go('/well');
   },
 
+	'click .js-call': function(event){
+			event.preventDefault();
+			window.alert("Please wait our staff to call you!");
+	},
+
 });

@@ -86,6 +86,7 @@ Template.well.events({
     },
 
 		"click .js-add-basket": function(event,instance){
+      event.preventDefault();
 			const counter = "counter"+event.target.dataset.message;
 			const c = instance.state.get(counter);
       const t = instance.state.get("total");
@@ -98,6 +99,7 @@ Template.well.events({
 	  },
 
 		"click .js-minus-basket": function(event,instance){
+      event.preventDefault();
 			const counter = "counter"+event.target.dataset.message;
       const c = instance.state.get(counter);
       const t = instance.state.get("total");
@@ -107,5 +109,15 @@ Template.well.events({
       }
       instance.state.set(counter,c-1);
       instance.state.set("total", t-1);
+    },
+
+    "click .js-close": function(event,instance){
+      event.preventDefault();
+			window.alert("This close button feature not available now!");
+    },
+
+    'click .js-call': function(event){
+        event.preventDefault();
+        window.alert("Please wait our staff to call you!");
     },
 });

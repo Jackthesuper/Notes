@@ -11,7 +11,7 @@ Template.well4.helpers({
 	'preference2': function(){
 		return Preferences.findOne().selected[1];
 	},
-	
+
   bmiCondition: function(){
     const object = Demographic.findOne();
     if(object.bmi<=21){
@@ -54,5 +54,10 @@ Template.well4.events({
     'click .js-go-home': function(event){
         event.preventDefault();
         Router.go('/well');
+    },
+
+		'click .js-call': function(event){
+        event.preventDefault();
+        window.alert("Please wait our staff to call you!");
     },
 });

@@ -254,8 +254,8 @@ button:hover {
   <div class="navbar">
     <a href="#" class="right logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a>
     <a href="/images/project_well_Nicole.pdf" class="right" download><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Survey</a>
-    <a href="#" class="right"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Order by phone</a>
-    <a href="#" class="right">{{#if currentUser}}
+    <a href="#" class="js-call right"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Order by phone</a>
+    <a href="{{pathFor 'well'}}" class="right">{{#if currentUser}}
        Welcome {{currentUser.username}}
     {{else}}
        You better log in!!!

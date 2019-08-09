@@ -68,4 +68,9 @@ Template.well5.events({
 			event.preventDefault();
 			Router.go('/well');
 	},
+
+	'click .js-call': function(event){
+			event.preventDefault();
+			window.alert("Please wait our staff to call you!");
+	},
 });

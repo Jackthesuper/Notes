@@ -11,7 +11,7 @@ Template.well3.helpers({
 	'preference2': function(){
 		return Preferences.findOne().selected[1];
 	},
-	
+
 	bmiCondition: function(){
     const object = Demographic.findOne();
     if(object.bmi<=21){
@@ -31,5 +31,10 @@ Template.well3.events({
 			event.preventDefault();
 			Meteor.logout();
 			Router.go('/login');
+	},
+
+	'click .js-call': function(event){
+			event.preventDefault();
+			window.alert("Please wait our staff to call you!");
 	},
 });
