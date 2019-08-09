@@ -1,5 +1,6 @@
 {
   "name": "simple-todos",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "meteor run",
@@ -23,5 +24,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0"
+  },
+  "engines": {
+    "node": "10.16.0"
   }
 }
