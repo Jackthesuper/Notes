@@ -37,4 +37,14 @@ Template.well3.events({
 			event.preventDefault();
 			window.alert("Please wait our staff to call you!");
 	},
+
+	'click .js-edit-preference': function(event){
+			event.preventDefault();
+			Router.go('/well4');
+	},
+
+	'click .js-edit-demographic': function(event){
+			event.preventDefault();
+			Router.go('/well5');
+	},
 });
