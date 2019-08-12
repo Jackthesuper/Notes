@@ -195,6 +195,19 @@
     }
   }
 
+  .topright {
+  position: absolute;
+  top: -1px;
+  right: 28px;
+  font-size: 18px;
+  background-color: #20b2aa;
+  color: white;
+  padding: 6px;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+
+}
+
   .cb {
   display: block;
   position: relative;
@@ -486,11 +499,15 @@ transform: rotate(45deg);
 
     </div>
     <div class="main" style="padding-top: 5px;padding-left: 40px;padding-right: 0px;">
-      <h3>Prepared Meals</h3>
+      <div class="row">
+        <h3 style="padding-left:13px;">Prepared Meals</h3>
+        <h4 style="margin-top:20px;padding-left:490px"><span style="font-size:24px;color:#20b2aa;">21</span> to select from</h4>
+      </div>
       <div class="row" style="width:100%">
         <div class="col-lg-4">
           <!-- Trigger the modal with a button -->
-          <div class="meal" style="text-align:center;">
+          <div class="meal" style="text-align:center;position:relative;">
+            <div class="topright" style="right:11px;">95%</div>
             <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal">
               <img style="height:130px;" src="images/z_n_t_b.jpg">
               <h4>Zucchini noodles with turkey Bolognese</h4>
@@ -717,6 +734,7 @@ transform: rotate(45deg);
         <div class="col-lg-4">
           <!-- Trigger the modal with a button -->
           <div class="meal" style="text-align:center;">
+            <div class="topright">94%</div>
             <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal2">
               <img style="height:130px;" src="images/s_a_a_p.jpg">
               <h4>Shrimp, avocado and brown rice pesto</h4>
@@ -942,6 +960,7 @@ transform: rotate(45deg);
         <div class="col-lg-4">
           <!-- Trigger the modal with a button -->
           <div class="meal" style="text-align:center;">
+            <div class="topright">91%</div>
             <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal3">
               <img style="height:130px;" src="images/v_c_w_s_p.jpg">
               <h4>Veg. chili with sweet potato and black beans</h4>
@@ -1171,6 +1190,7 @@ transform: rotate(45deg);
         <div class="col-lg-4">
           <!-- Trigger the modal with a button -->
           <div class="meal" style="text-align:center;">
+            <div class="topright">90%</div>
             <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal4">
               <img style="height:130px;" src="images/c_t_w_c_w_b_s.jpg">
               <h4>Chicken thighs with cucumber salad</h4>
@@ -1397,6 +1417,7 @@ transform: rotate(45deg);
         <div class="col-lg-4">
           <!-- Trigger the modal with a button -->
           <div class="meal" style="text-align:center;">
+            <div class="topright" style="background-color:orange">89%</div>
             <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal5">
               <img style="height:130px;" src="images/r_v_o_l.jpg">
               <h4>Roasted vegetables and greens over lentils</h4>
@@ -1622,6 +1643,7 @@ transform: rotate(45deg);
         <div class="col-lg-4">
           <!-- Trigger the modal with a button -->
           <div class="meal" style="text-align:center;">
+            <div class="topright" style="background-color:orangered">75%</div>
             <button type="button" style="width: 86%; background-color:white;border:none;" data-toggle="modal" data-target="#myModal6">
               <img style="height:130px;" src="images/a_a_h_f.jpg">
               <h4>Asparagus & artichoke heart frittata</h4>
