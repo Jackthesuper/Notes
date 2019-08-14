@@ -242,6 +242,21 @@ button:hover {
       width: 100%;
     }
   }
+
+  .label1{
+    color: #607596;
+    border: 1px solid #607596;
+  }
+
+  .label2{
+    color: #837CC4;
+    border: 1px solid #837CC4;
+  }
+
+  .label3{
+    color: #5cc2dc;
+    border: 1px solid #5cc2dc;
+  }
   </style>
   </head>
   <body>
@@ -292,27 +307,27 @@ button:hover {
 
       <h4 style="margin-top:-5px;">Based on:</h4>
       <h5>
-        <span class="glyphicon glyphicon-user text-success" aria-hidden="true"></span>  Demographic Data    &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="glyphicon glyphicon-user" aria-hidden="true" style="color:#607596"></span>&nbsp;Demographic Data    &nbsp;&nbsp;&nbsp;&nbsp;
         <span class="op2 js-edit-demographic" style="cursor:pointer;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  Edit</span>
       </h5>
-      <h4><span class="label label-success">Male</span> <span class="label label-success">{{bmiCondition}}/ BMI {{demographic.bmi}}</span></h4>
-      <h4><span class="label label-success">Age 72</span> <span class="label label-success">{{demographic.household}}</span></h4><br>
+      <h4><span class="label label1">Male</span> <span class="label label1">{{bmiCondition}}/ BMI {{demographic.bmi}}</span></h4>
+      <h4><span class="label label1">Age 72</span> <span class="label label1">{{demographic.household}}</span></h4><br>
       <h5>
-        <span class="glyphicon glyphicon-plus text-primary" aria-hidden="true"></span>  Clinical Needs
+        <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:#837cc4;"></span>&nbsp;Clinical Needs
       </h5>
-      <h4><span class="label label-primary">Diabetes</span> <span class="label label-primary">High blood pressure</span></h4>
-      <h4><span class="label label-primary">High cholesterol</span> <span class="label label-primary">Depression</span></h4><br>
+      <h4><span class="label label2">Diabetes</span> <span class="label label2">High blood pressure</span></h4>
+      <h4><span class="label label2">High cholesterol</span> <span class="label label2">Depression</span></h4><br>
       <h5>
-        <span class="glyphicon glyphicon-heart text-info" aria-hidden="true"></span>  Preferences   &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="glyphicon glyphicon-heart" aria-hidden="true" style="color:#5cc2dc"></span>&nbsp;Preferences   &nbsp;&nbsp;&nbsp;&nbsp;
         <span class="op2 js-edit-preference" style="cursor:pointer;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  Edit</span>
       </h5>
       <h4>
-        <span class="label label-info">Food Delivery <span class="glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
-        <span class="label label-info">{{preference}} <span class="glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
+        <span class="label label3">Food Delivery <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
+        <span class="label label3">{{preference}} <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
       </h4>
       <h4>
-        <span class="label label-info">{{preference2}} <span class="glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
-        <span class="label label-info">Plant-based <span class="glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
+        <span class="label label3">{{preference2}} <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
+        <span class="label label3">Plant-based <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
       </h4><br>
 
       <h4>Your weekly selection: <span class="op2" style="float:right;">0/10</span></h4>

@@ -20,7 +20,9 @@ input[type=text], input[type=password] {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc; */
+  height: 40px;
   border-radius: 20px;
+  border: 1px solid darkgrey;
   border-left: none;
   background-color: white;
 }
@@ -33,7 +35,7 @@ h5 {
 .button1 {
   background-color: #20B2AA;
   color: white;
-  padding: 14px 20px;
+  height: 40px;
   margin: 8px 0;
   border: none;
   border-radius: 20px;
@@ -42,7 +44,7 @@ h5 {
 }
 .button2 {
   background-color: white;
-  padding: 14px 20px;
+  height: 40px;
   margin: 8px 0;
   color: black;
   border: 2px solid #20B2AA;
@@ -98,6 +100,7 @@ span.input-group-addon{
   border-bottom-left-radius: 20px;
   background-color: white !important;
   border-right: none;
+  border: 1px solid darkgrey;
 }
 </style>
 
@@ -107,7 +110,7 @@ span.input-group-addon{
   </div> -->
 
 
-  <div class="jumbotron text-center" style="padding-top:100px;padding-bottom:100px;">
+  <div class="jumbotron text-center" style="padding-top:100px;padding-bottom:100px;background-color:white;">
     <h1>Project<span style="color:#20B2AA;">WELL</span></h1><br>
     <form class="form-horizontal">
       <div class="input-group">
@@ -126,7 +129,9 @@ span.input-group-addon{
       <button class="button button1 js-login-submit" type="submit">Login</button><br>
       <h5 style="cursor: pointer;">Forget password?</h5>
       <br><br><br><br>
-      <button class="button button2" type="submit"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>    Please call me</button>
+      <button class="button button2" type="submit"><span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color: #20b2aa;"></span>
+        <span class="cc" style="color:darkgrey;">Please call me</span>
+      </button>
     </form>
   </div>
 
