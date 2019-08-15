@@ -3,6 +3,7 @@
   <title>Page Title</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.typekit.net/wlo1zba.css">
   <style>
   * {
     box-sizing: border-box;
@@ -10,12 +11,16 @@
 
   /* Style the body */
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
   }
 
   th{
     text-align: center;
+  }
+
+  h4{
+    font-size: 16px;
   }
 
   td{
@@ -162,7 +167,8 @@
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  width: 19%;
+  width: 17%;
+  font-weight: 500;
 }
 .button4 {
   background-color: #20B2AA;
@@ -373,7 +379,7 @@ button:hover {
                 <img style="height:20%; float:left; margin-right:16px;" src="images/s_a_a_p.jpg">
                 <p style="margin-top: 20px; margin-right: 0px;">Shrimp, avocado, arugula and brown rice pesto</p>
               </td>
-              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=1 class="button button5 js-puller">-</button>
+              <td style="vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=1 class="button button5 js-puller">-</button>
                 <span class="random">{{theCounter 1}}</span>
                 <button style="font-size:17px; margin-left: -4px;;" data-message=1 class="button button5 js-pusher">+</button>
               </td>
@@ -414,7 +420,7 @@ button:hover {
                 <img style="height:20%; float:left; margin-right:16px;" src="images/c_t_w_c_w_b_s.jpg">
                 <p style="margin-top: 20px; margin-right: 0px;">Chicken thighs with cucumber salad</p>
               </td>
-              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=2 class="button button5 js-puller">-</button>
+              <td style="vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=2 class="button button5 js-puller">-</button>
                 <span class="random">{{theCounter 2}}</span>
                 <button style="font-size:17px; margin-left: -4px;;" data-message=2 class="button button5 js-pusher">+</button>
               </td>
@@ -455,7 +461,7 @@ button:hover {
                 <img style="height:20%; float:left; margin-right:16px;" src="images/a_a_h_f.jpg">
                 <p style="margin-top: 20px; margin-right: 0px;">Asparagus and artichoke heart frittata</p>
               </td>
-              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=3 class="button button5 js-puller">-</button>
+              <td style="vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=3 class="button button5 js-puller">-</button>
                 <span class="random">{{theCounter 3}}</span>
                 <button style="font-size:17px; margin-left: -4px;;" data-message=3 class="button button5 js-pusher">+</button>
               </td>
@@ -496,7 +502,7 @@ button:hover {
                 <img style="height:20%; float:left; margin-right:16px;" src="images/z_n_t_b.jpg">
                 <p style="margin-top: 20px; margin-right: 0px;">Zucchini noodles with turkey Bolognese</p>
               </td>
-              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=4 class="button button5 js-puller">-</button>
+              <td style="vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=4 class="button button5 js-puller">-</button>
                 <span class="random">{{theCounter 4}}</span>
                 <button style="font-size:17px; margin-left: -4px;;" data-message=4 class="button button5 js-pusher">+</button>
               </td>
@@ -537,7 +543,7 @@ button:hover {
                 <img style="height:20%; float:left; margin-right:16px;" src="images/v_c_w_s_p.jpg">
                 <p style="margin-top: 20px; margin-right: 0px;">Veg. chill with sweet potato and black beans</p>
               </td>
-              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=5 class="button button5 js-puller">-</button>
+              <td style="vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=5 class="button button5 js-puller">-</button>
                 <span class="random">{{theCounter 5}}</span>
                 <button style="font-size:17px; margin-left: -4px;;" data-message=5 class="button button5 js-pusher">+</button>
               </td>
@@ -576,10 +582,10 @@ button:hover {
           </tbody>
         </table>
         <footer class="container-fluid" style="text-align:center;padding:0px;">
-          <h5 style="display:inline;padding-right:16px;border-right:1px solid grey;">You selected <span style="color:#20B2AA;">{{theTotal}} meals -
+          <h5 style="font-size:13px;display:inline;padding-right:16px;border-right:1px solid grey;">You selected <span style="color:#20B2AA;">{{theTotal}} meals -
           </span> you are eligible for <span style="color:#20B2AA;">{{theRest}} more</span>, estimated delivery
           <span style="color:#20B2AA;">08/30/2019</span></h5>
-          <h5 style="display:inline;opacity:0.5;padding-left:8px;padding-right:15px;">Total cost:$0</h5>
+          <h5 style="font-size:12px;display:inline;opacity:0.5;padding-left:8px;padding-right:15px;">Total cost:$0</h5>
           <button class="button button3 js-place-order" style="display:inline">Place your order</button>
         </footer>
       </div>
