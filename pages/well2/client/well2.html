@@ -243,6 +243,36 @@ button:hover {
     color: #5cc2dc;
     border: 1px solid #5cc2dc;
   }
+
+  .custom {
+    position: relative;
+  }
+
+  .custom:after {
+    content: " ";
+    position: absolute;
+    border-left: 1px solid black;
+    top: 5%;
+    right: -20px;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .customL {
+    position: relative;
+  }
+
+  .customL:after {
+    content: " ";
+    position: absolute;
+    border-left: 1px solid black;
+    top: 5%;
+    right: 19px;
+    height: 90%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
   </style>
   </head>
   <body>
@@ -305,9 +335,18 @@ button:hover {
     </div>
     <div class="main" style="padding-top: 5px;padding-left: 40px;padding-right: 0px;">
       <div class="navbar">
-        <a href="#" class="right logout" style="font-size:small;"><span class="glyphicon glyphicon-log-out" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Logout</a>
-        <a href="/images/project_well_Nicole.pdf" class="right" download style="font-size:small"><span class="glyphicon glyphicon-file" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Survey</a>
-        <a href="#" class="js-call right" style="font-size:small"><span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;Order by phone</a>
+        <a href="#" class="right logout" style="font-size:small;">
+          <span class="glyphicon glyphicon-log-out" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Logout
+        </a>
+        <a href="/images/project_well_Nicole.pdf" class="right" download style="font-size:small">
+          <span class="glyphicon glyphicon-file" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;
+          <span class="custom">Survey</span>
+        </a>
+        <a href="#" class="js-call right" style="font-size:small">
+          <span class="customL"></span>
+          <span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;
+          <span class="custom">Order by phone</span>
+        </a>
         <a href="{{pathFor 'well'}}" class="right" style="font-weight:bold">{{#if currentUser}}
            Welcome {{currentUser.username}}
         {{else}}
