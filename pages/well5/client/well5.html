@@ -30,14 +30,14 @@
   /* Style the top navigation bar */
   .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: none;
   }
 
   /* Style the navigation bar links */
   .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -199,17 +199,6 @@ button:hover {
   </style>
   </head>
   <body>
-  <div class="navbar">
-    <a href="#" class="right logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a>
-    <a href="/images/project_well_Nicole.pdf" class="right" download><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Survey</a>
-    <a href="#" class="js-call right"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Order by phone</a>
-    <a href="{{pathFor 'well'}}" class="right">{{#if currentUser}}
-       Welcome {{currentUser.username}}
-    {{else}}
-       You better log in!!!
-    {{/if}}</a>
-  </div>
-
   <div class="row" style="margin-left:0px;">
     <div class="side">
       <h2>Project<span style="color:#20B2AA;">WELL</span></h2><br>
@@ -265,144 +254,155 @@ button:hover {
       <button class="button button4 js-go-home" style="display:inline"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Go back to meal selection</button>
 
     </div>
-    <div style="padding-top:0px;" class="main">
-      <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Edit Demographic Data</h4><br>
-      <form action="/action_page.php">
-        <div class="form-group">
-          <div class="row">
-            <div class="col-lg-4">
-              <label class="control-label op">Address</label>
-              <textarea class="form-control js-address" rows="1" value={{demographic.address}} style="resize:none;"></textarea>
-            </div>
-            <div class="col-lg-8">
-                <div class="row">
-                <div class="col-lg-4">
-                <label class="control-label">State</label>
-                <select class="form-control js-select-state">
-                  <option value={{demographic.state}} selected hidden>{{demographic.state}}</option>
-              		<option>AL</option>
-              		<option>AK</option>
-              		<option>AZ</option>
-              		<option>AR</option>
-                  <option>CA</option>
-              		<option>CO</option>
-              		<option>CT</option>
-              		<option>DE</option>
-                  <option>FL</option>
-              		<option>GA</option>
-              		<option>HI</option>
-              		<option>ID</option>
-                  <option>IL</option>
-              		<option>IN</option>
-              		<option>IA</option>
-                  <option>KS</option>
-              		<option>LA</option>
-              		<option>ME</option>
-              		<option>MD</option>
-                  <option>MA</option>
-                  <option>MI</option>
-              		<option>MN</option>
-              		<option>MS</option>
-                  <option>MO</option>
-              		<option>MT</option>
-              		<option>NE</option>
-              		<option>NV</option>
-                  <option>NH</option>
-                  <option>NJ</option>
-              		<option>NM</option>
-              		<option>NY</option>
-                  <option>NC</option>
-              		<option>ND</option>
-              		<option>OH</option>
-              		<option>OK</option>
-                  <option>OR</option>
-              		<option>PA</option>
-                  <option>RI</option>
-              		<option>SC</option>
-              		<option>SD</option>
-              		<option>TN</option>
-                  <option>TX</option>
-                  <option>UT</option>
-              		<option>VT</option>
-              		<option>VA</option>
-                  <option>WA</option>
-              		<option>WV</option>
-              		<option>WI</option>
-              		<option>WY</option>
-            	   </select>
-                 </div>
-                 <div class="col-lg-4">
-                 <label class="control-label">Zip Code</label>
-                 <select class="form-control js-select-zipcode">
-                  <option value={{demographic.zipcode}} selected hidden>{{demographic.zipcode}}</option>
-               		<option>89107</option>
-               		<option>2</option>
-               		<option>3</option>
-               		<option>4</option>
-               		<option>5</option>
-             	   </select>
-                  </div>
+    <div class="main" style="padding-top: 5px;padding-left: 40px;padding-right: 0px;">
+      <div class="navbar">
+        <a href="#" class="right logout" style="font-size:small;"><span class="glyphicon glyphicon-log-out" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Logout</a>
+        <a href="/images/project_well_Nicole.pdf" class="right" download style="font-size:small"><span class="glyphicon glyphicon-file" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Survey</a>
+        <a href="#" class="js-call right" style="font-size:small"><span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;Order by phone</a>
+        <a href="{{pathFor 'well'}}" class="right" style="font-weight:bold">{{#if currentUser}}
+           Welcome {{currentUser.username}}
+        {{else}}
+           You better log in!!!
+        {{/if}}</a>
+      </div>
+      <div class="innerMain" style="width:95%">
+        <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Edit Demographic Data</h4><br>
+        <form action="/action_page.php">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-4">
+                <label class="control-label op">Address</label>
+                <textarea class="form-control js-address" rows="1" value={{demographic.address}} style="resize:none;"></textarea>
+              </div>
+              <div class="col-lg-8">
+                  <div class="row">
                   <div class="col-lg-4">
-                  <label class="control-label">Household size</label>
-                  <select class="form-control js-select-household">
-                    <option value={{demographic.household}} selected hidden>{{demographic.household}}</option>
-                    <option>Living alone</option>
-                		<option>2</option>
-                		<option>3</option>
-                		<option>4</option>
-                		<option>5</option>
+                  <label class="control-label">State</label>
+                  <select class="form-control js-select-state">
+                    <option value={{demographic.state}} selected hidden>{{demographic.state}}</option>
+                		<option>AL</option>
+                		<option>AK</option>
+                		<option>AZ</option>
+                		<option>AR</option>
+                    <option>CA</option>
+                		<option>CO</option>
+                		<option>CT</option>
+                		<option>DE</option>
+                    <option>FL</option>
+                		<option>GA</option>
+                		<option>HI</option>
+                		<option>ID</option>
+                    <option>IL</option>
+                		<option>IN</option>
+                		<option>IA</option>
+                    <option>KS</option>
+                		<option>LA</option>
+                		<option>ME</option>
+                		<option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                		<option>MN</option>
+                		<option>MS</option>
+                    <option>MO</option>
+                		<option>MT</option>
+                		<option>NE</option>
+                		<option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                		<option>NM</option>
+                		<option>NY</option>
+                    <option>NC</option>
+                		<option>ND</option>
+                		<option>OH</option>
+                		<option>OK</option>
+                    <option>OR</option>
+                		<option>PA</option>
+                    <option>RI</option>
+                		<option>SC</option>
+                		<option>SD</option>
+                		<option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                		<option>VT</option>
+                		<option>VA</option>
+                    <option>WA</option>
+                		<option>WV</option>
+                		<option>WI</option>
+                		<option>WY</option>
               	   </select>
                    </div>
-                 </div>
+                   <div class="col-lg-4">
+                   <label class="control-label">Zip Code</label>
+                   <select class="form-control js-select-zipcode">
+                    <option value={{demographic.zipcode}} selected hidden>{{demographic.zipcode}}</option>
+                 		<option>89107</option>
+                 		<option>2</option>
+                 		<option>3</option>
+                 		<option>4</option>
+                 		<option>5</option>
+               	   </select>
+                    </div>
+                    <div class="col-lg-4">
+                    <label class="control-label">Household size</label>
+                    <select class="form-control js-select-household">
+                      <option value={{demographic.household}} selected hidden>{{demographic.household}}</option>
+                      <option>Living alone</option>
+                  		<option>2</option>
+                  		<option>3</option>
+                  		<option>4</option>
+                  		<option>5</option>
+                	   </select>
+                     </div>
+                   </div>
+              </div>
+            </div>
+          </div><br>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-2">
+                <label class="control-label">Weight (lbs)</label>
+                <select class="form-control js-select-weight">
+                  <option></option>
+                  <option>90</option>
+                  <option>100</option>
+              		<option>110</option>
+              		<option>120</option>
+              		<option>130</option>
+              		<option>140</option>
+              		<option>150</option>
+                  <option>160</option>
+              		<option>170</option>
+              		<option>180</option>
+              		<option>190</option>
+                  <option>200</option>
+              		<option>210</option>
+              		<option>220</option>
+              	</select>
+              </div>
+              <div class="col-lg-2" style="width:14%;">
+                <label class="control-label">Height (in)</label>
+                <textarea class="form-control js-height" rows="1" id="comment" value="71" style="border:none; background-color:#f0f0f0;resize:none;" disabled></textarea>
+              </div>
+              <div class="col-lg-1" style="width:5%;">
+                <span style="margin-top: 30px; color: #20B2AA;" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              </div>
+              <div class="col-lg-2" style="width:14%;">
+                <label class="control-label">BMI index</label>
+                <textarea class="form-control js-bmi" rows="1" id="comment" style="border:none; background-color:#f0f0f0;resize:none;" disabled></textarea>
+              </div>
             </div>
           </div>
-        </div><br>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-lg-2">
-              <label class="control-label">Weight (lbs)</label>
-              <select class="form-control js-select-weight">
-                <option></option>
-                <option>90</option>
-                <option>100</option>
-            		<option>110</option>
-            		<option>120</option>
-            		<option>130</option>
-            		<option>140</option>
-            		<option>150</option>
-                <option>160</option>
-            		<option>170</option>
-            		<option>180</option>
-            		<option>190</option>
-                <option>200</option>
-            		<option>210</option>
-            		<option>220</option>
-            	</select>
-            </div>
-            <div class="col-lg-2" style="width:14%;">
-              <label class="control-label">Height (in)</label>
-              <textarea class="form-control js-height" rows="1" id="comment" value="71" style="border:none; background-color:#f0f0f0;resize:none;" disabled></textarea>
-            </div>
-            <div class="col-lg-1" style="width:5%;">
-              <span style="margin-top: 30px; color: #20B2AA;" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            </div>
-            <div class="col-lg-2" style="width:14%;">
-              <label class="control-label">BMI index</label>
-              <textarea class="form-control js-bmi" rows="1" id="comment" style="border:none; background-color:#f0f0f0;resize:none;" disabled></textarea>
-            </div>
-          </div>
-        </div>
-        <!-- <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> -->
-        <!-- <div class="checkbox">
-          <label><input type="checkbox"> Remember me</label>
-        </div> -->
-      </form>
-      <br><br>
-      <footer class="container-fluid">
-        <button class="js-submit button button1" type="submit">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="js-cancel button button2" type="submit">Cancel</button>
-      </footer>
-
+          <!-- <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> -->
+          <!-- <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div> -->
+        </form>
+        <br><br>
+        <footer class="container-fluid">
+          <button class="js-submit button button1" type="submit">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="js-cancel button button2" type="submit">Cancel</button>
+        </footer>
+      </div>
     </div>
   </div>
 

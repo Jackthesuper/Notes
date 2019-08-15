@@ -39,14 +39,14 @@
   /* Style the top navigation bar */
   .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: none;
   }
 
   /* Style the navigation bar links */
   .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -246,16 +246,7 @@ button:hover {
   </style>
   </head>
   <body>
-  <div class="navbar">
-    <a href="#" class="right logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a>
-    <a href="/images/project_well_Nicole.pdf" class="right" download><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Survey</a>
-    <a href="#" class="js-call right"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Order by phone</a>
-    <a href="{{pathFor 'well'}}" class="right">{{#if currentUser}}
-       Welcome {{currentUser.username}}
-    {{else}}
-       You better log in!!!
-    {{/if}}</a>
-  </div>
+
 
   <div class="row" style="margin-left:0px;">
     <div class="side">
@@ -312,233 +303,245 @@ button:hover {
       <button class="button button4 js-go-home" style="display:inline"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Go back to meal selection</button>
 
     </div>
-    <div class="main">
-      <table class="table gfg" id="myTable">
-        <thead>
-          <tr>
-            <th scope="col" style="padding: 0px;border: none; text-align: left;"><h4 style="font-weight:bold;">Your basket for this week</h4></th>
-            <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">QTY</h5></th>
-            <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Nutritions:</h5></th>
-            <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Matches your needs:</h5></th>
-            <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Covered by:</h5></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <!-- <th scope="row">Mark</th> -->
-            <td style="text-align:left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
-              <img style="height:20%; float:left; margin-right:16px;" src="images/s_a_a_p.jpg">
-              <p style="margin-top: 20px; margin-right: 0px;">Shrimp, avocado, arugula and brown rice pesto</p>
-            </td>
-            <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=1 class="button button5 js-puller">-</button>
-              <span class="random">{{theCounter 1}}</span>
-              <button style="font-size:17px; margin-left: -4px;;" data-message=1 class="button button5 js-pusher">+</button>
-            </td>
-            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
-              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Calories:
+    <div class="main" style="padding-top: 5px;padding-left: 40px;padding-right: 0px;">
+      <div class="navbar">
+        <a href="#" class="right logout" style="font-size:small;"><span class="glyphicon glyphicon-log-out" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Logout</a>
+        <a href="/images/project_well_Nicole.pdf" class="right" download style="font-size:small"><span class="glyphicon glyphicon-file" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Survey</a>
+        <a href="#" class="js-call right" style="font-size:small"><span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;Order by phone</a>
+        <a href="{{pathFor 'well'}}" class="right" style="font-weight:bold">{{#if currentUser}}
+           Welcome {{currentUser.username}}
+        {{else}}
+           You better log in!!!
+        {{/if}}</a>
+      </div>
+      <div class="innerMain" style="width:95%;">
+        <table class="table gfg" id="myTable">
+          <thead>
+            <tr>
+              <th scope="col" style="padding: 0px;border: none; text-align: left;"><h4 style="font-weight:bold;">Your basket for this week</h4></th>
+              <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">QTY</h5></th>
+              <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Nutritions:</h5></th>
+              <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Matches your needs:</h5></th>
+              <th scope="col" style="padding: 0px;opacity:0.3; border:none;"><h5 style="font-weight:bold;">Covered by:</h5></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- <th scope="row">Mark</th> -->
+              <td style="text-align:left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+                <img style="height:20%; float:left; margin-right:16px;" src="images/s_a_a_p.jpg">
+                <p style="margin-top: 20px; margin-right: 0px;">Shrimp, avocado, arugula and brown rice pesto</p>
+              </td>
+              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=1 class="button button5 js-puller">-</button>
+                <span class="random">{{theCounter 1}}</span>
+                <button style="font-size:17px; margin-left: -4px;;" data-message=1 class="button button5 js-pusher">+</button>
+              </td>
+              <td style="padding: 5px;vertical-align:middle; width:14%;text-algin:left;">
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Calories:
+                  </div>
+                  <div class="col-sm-5">
+                    200
+                  </div>
                 </div>
-                <div class="col-sm-5">
-                  200
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Protein
+                  </div>
+                  <div class="col-sm-5">
+                    20g
+                  </div>
                 </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Protein
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Fat:
+                  </div>
+                  <div class="col-sm-5">
+                    7g
+                  </div>
                 </div>
-                <div class="col-sm-5">
-                  20g
+              </td>
+              <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">94%</div></td>
+              <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
+                <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+                <img style="height:20%; float:left; margin-right:16px;" src="images/c_t_w_c_w_b_s.jpg">
+                <p style="margin-top: 20px; margin-right: 0px;">Chicken thighs with cucumber salad</p>
+              </td>
+              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=2 class="button button5 js-puller">-</button>
+                <span class="random">{{theCounter 2}}</span>
+                <button style="font-size:17px; margin-left: -4px;;" data-message=2 class="button button5 js-pusher">+</button>
+              </td>
+              <td style="padding: 5px;vertical-align:middle; width:14%;text-algin:left;">
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Calories:
+                  </div>
+                  <div class="col-sm-5">
+                    200
+                  </div>
                 </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Fat:
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Protein
+                  </div>
+                  <div class="col-sm-5">
+                    20g
+                  </div>
                 </div>
-                <div class="col-sm-5">
-                  7g
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Fat:
+                  </div>
+                  <div class="col-sm-5">
+                    7g
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">94%</div></td>
-            <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
-              <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
-              <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align:left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
-              <img style="height:20%; float:left; margin-right:16px;" src="images/c_t_w_c_w_b_s.jpg">
-              <p style="margin-top: 20px; margin-right: 0px;">Chicken thighs with cucumber salad</p>
-            </td>
-            <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=2 class="button button5 js-puller">-</button>
-              <span class="random">{{theCounter 2}}</span>
-              <button style="font-size:17px; margin-left: -4px;;" data-message=2 class="button button5 js-pusher">+</button>
-            </td>
-            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
-              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Calories:
+              </td>
+              <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle2">89%</div></td>
+              <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
+                <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+                <img style="height:20%; float:left; margin-right:16px;" src="images/a_a_h_f.jpg">
+                <p style="margin-top: 20px; margin-right: 0px;">Asparagus and artichoke heart frittata</p>
+              </td>
+              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=3 class="button button5 js-puller">-</button>
+                <span class="random">{{theCounter 3}}</span>
+                <button style="font-size:17px; margin-left: -4px;;" data-message=3 class="button button5 js-pusher">+</button>
+              </td>
+              <td style="padding: 5px;vertical-align:middle; width:14%;text-algin:left;">
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Calories:
+                  </div>
+                  <div class="col-sm-5">
+                    200
+                  </div>
                 </div>
-                <div class="col-sm-5">
-                  200
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Protein
+                  </div>
+                  <div class="col-sm-5">
+                    20g
+                  </div>
                 </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Protein
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Fat:
+                  </div>
+                  <div class="col-sm-5">
+                    7g
+                  </div>
                 </div>
-                <div class="col-sm-5">
-                  20g
+              </td>
+              <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle3">75%</div></td>
+              <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
+                <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+                <img style="height:20%; float:left; margin-right:16px;" src="images/z_n_t_b.jpg">
+                <p style="margin-top: 20px; margin-right: 0px;">Zucchini noodles with turkey Bolognese</p>
+              </td>
+              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=4 class="button button5 js-puller">-</button>
+                <span class="random">{{theCounter 4}}</span>
+                <button style="font-size:17px; margin-left: -4px;;" data-message=4 class="button button5 js-pusher">+</button>
+              </td>
+              <td style="padding: 5px;vertical-align:middle; width:14%;text-algin:left;">
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Calories:
+                  </div>
+                  <div class="col-sm-5">
+                    200
+                  </div>
                 </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Fat:
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Protein
+                  </div>
+                  <div class="col-sm-5">
+                    20g
+                  </div>
                 </div>
-                <div class="col-sm-5">
-                  7g
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Fat:
+                  </div>
+                  <div class="col-sm-5">
+                    7g
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle2">89%</div></td>
-            <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
-              <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
-              <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align:left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
-              <img style="height:20%; float:left; margin-right:16px;" src="images/a_a_h_f.jpg">
-              <p style="margin-top: 20px; margin-right: 0px;">Asparagus and artichoke heart frittata</p>
-            </td>
-            <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=3 class="button button5 js-puller">-</button>
-              <span class="random">{{theCounter 3}}</span>
-              <button style="font-size:17px; margin-left: -4px;;" data-message=3 class="button button5 js-pusher">+</button>
-            </td>
-            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
-              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Calories:
+              </td>
+              <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">91%</div></td>
+              <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
+                <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
+                <img style="height:20%; float:left; margin-right:16px;" src="images/v_c_w_s_p.jpg">
+                <p style="margin-top: 20px; margin-right: 0px;">Veg. chill with sweet potato and black beans</p>
+              </td>
+              <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=5 class="button button5 js-puller">-</button>
+                <span class="random">{{theCounter 5}}</span>
+                <button style="font-size:17px; margin-left: -4px;;" data-message=5 class="button button5 js-pusher">+</button>
+              </td>
+              <td style="padding: 5px;vertical-align:middle; width:14%;text-algin:left;">
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Calories:
+                  </div>
+                  <div class="col-sm-5">
+                    200
+                  </div>
                 </div>
-                <div class="col-sm-5">
-                  200
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Protein
+                  </div>
+                  <div class="col-sm-5">
+                    20g
+                  </div>
                 </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Protein
+                <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                  <div class="col-sm-7">
+                    Fat:
+                  </div>
+                  <div class="col-sm-5">
+                    7g
+                  </div>
                 </div>
-                <div class="col-sm-5">
-                  20g
-                </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Fat:
-                </div>
-                <div class="col-sm-5">
-                  7g
-                </div>
-              </div>
-            </td>
-            <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle3">75%</div></td>
-            <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
-              <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
-              <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
-              <img style="height:20%; float:left; margin-right:16px;" src="images/z_n_t_b.jpg">
-              <p style="margin-top: 20px; margin-right: 0px;">Zucchini noodles with turkey Bolognese</p>
-            </td>
-            <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=4 class="button button5 js-puller">-</button>
-              <span class="random">{{theCounter 4}}</span>
-              <button style="font-size:17px; margin-left: -4px;;" data-message=4 class="button button5 js-pusher">+</button>
-            </td>
-            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
-              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Calories:
-                </div>
-                <div class="col-sm-5">
-                  200
-                </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Protein
-                </div>
-                <div class="col-sm-5">
-                  20g
-                </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Fat:
-                </div>
-                <div class="col-sm-5">
-                  7g
-                </div>
-              </div>
-            </td>
-            <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">91%</div></td>
-            <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
-              <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
-              <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
-            </td>
-          </tr>
-          <tr>
-            <td style="text-align: left;padding: 0px;vertical-align:middle;width:40%; border-left:1px solid #ddd;">
-              <img style="height:20%; float:left; margin-right:16px;" src="images/v_c_w_s_p.jpg">
-              <p style="margin-top: 20px; margin-right: 0px;">Veg. chill with sweet potato and black beans</p>
-            </td>
-            <td style="padding-left: 15px;vertical-align:middle;"><button style="font-size:17px; margin-right: -4px;;" data-message=5 class="button button5 js-puller">-</button>
-              <span class="random">{{theCounter 5}}</span>
-              <button style="font-size:17px; margin-left: -4px;;" data-message=5 class="button button5 js-pusher">+</button>
-            </td>
-            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
-              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Calories:
-                </div>
-                <div class="col-sm-5">
-                  200
-                </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Protein
-                </div>
-                <div class="col-sm-5">
-                  20g
-                </div>
-              </div>
-              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
-                <div class="col-sm-7">
-                  Fat:
-                </div>
-                <div class="col-sm-5">
-                  7g
-                </div>
-              </div>
-            </td>
-            <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">90%</div></td>
-            <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
-              <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
-              <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <footer class="container-fluid" style="text-align:center">
-        <h5 style="display:inline;padding-right:16px;border-right:1px solid grey;">You selected <span style="color:#20B2AA;">{{theTotal}} meals -
-        </span> you are eligible for <span style="color:#20B2AA;">{{theRest}} more</span>, estimated delivery
-        <span style="color:#20B2AA;">08/30/2019</span></h5>
-        <h5 style="display:inline;opacity:0.5;padding-left:8px;padding-right:15px;">Total cost:$0</h5>
-        <button class="button button3 js-place-order" style="display:inline">Place your order</button>
-      </footer>
+              </td>
+              <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">90%</div></td>
+              <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
+                <button type="button" class="js-close close" style="position:absolute;top:-2px;right:0px;">&times;</button>
+                <span class="op2" style="margin-top:10px;">Medicare Advantage</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <footer class="container-fluid" style="text-align:center;padding:0px;">
+          <h5 style="display:inline;padding-right:16px;border-right:1px solid grey;">You selected <span style="color:#20B2AA;">{{theTotal}} meals -
+          </span> you are eligible for <span style="color:#20B2AA;">{{theRest}} more</span>, estimated delivery
+          <span style="color:#20B2AA;">08/30/2019</span></h5>
+          <h5 style="display:inline;opacity:0.5;padding-left:8px;padding-right:15px;">Total cost:$0</h5>
+          <button class="button button3 js-place-order" style="display:inline">Place your order</button>
+        </footer>
+      </div>
     </div>
   </div>
 

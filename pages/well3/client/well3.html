@@ -31,14 +31,14 @@
   /* Style the top navigation bar */
   .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: none;
   }
 
   /* Style the navigation bar links */
   .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -269,17 +269,6 @@ transform: rotate(45deg);
   </style>
   </head>
   <body>
-  <div class="navbar">
-    <a href="#" class="right logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a>
-    <a href="/images/project_well_Nicole.pdf" class="right" download><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Survey</a>
-    <a href="#" class="js-call right"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Order by phone</a>
-    <a href="{{pathFor 'well'}}" class="right">{{#if currentUser}}
-       Welcome {{currentUser.username}}
-    {{else}}
-       You better log in!!!
-    {{/if}}</a>
-  </div>
-
   <div class="row" style="margin-left:0px;">
     <div class="side">
       <h2>Project<span style="color:#20B2AA;">WELL</span></h2><br>
@@ -337,162 +326,174 @@ transform: rotate(45deg);
       </button>
 
     </div>
-    <div style="padding-top:0px;" class="main">
-      <h4 style="background-color: #20B2AA; padding: 10px; color: white;">Nutrition Information for your weekly order:</h4>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col" class="op">Nutritions</th>
-            <th scope="col" class="op">Your needs</th>
-            <th scope="col" class="op">Your meals</th>
-            <th scope="col" class="op"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Total calories</td>
-            <td>7000cal</td>
-            <td>7010cal</td>
-            <td>
-              <label class="cb">
-              <input type="checkbox" checked="checked" onclick="return false;">
-              <span class="checkmark"></span>
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>Protein</td>
-            <td>390g</td>
-            <td>350g</td>
-            <td>
-              <label class="cb2">
-              <input type="checkbox" checked="checked" onclick="return false;">
-              <span class="checkmark"></span>
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>Fats</td>
-            <td>308g</td>
-            <td>300g</td>
-            <td>
-              <label class="cb">
-              <input type="checkbox" checked="checked" onclick="return false;">
-              <span class="checkmark"></span>
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>Sugars</td>
-            <td>102g</td>
-            <td>100g</td>
-            <td>
-              <label class="cb">
-              <input type="checkbox" checked="checked" onclick="return false;">
-              <span class="checkmark"></span>
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>Fiber</td>
-            <td>175g</td>
-            <td>150g</td>
-            <td>
-              <label class="cb2">
-              <input type="checkbox" checked="checked" onclick="return false;">
-              <span class="checkmark"></span>
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>Cholesterol</td>
-            <td>1.4g</td>
-            <td>1.3g</td>
-            <td>
-              <label class="cb">
-              <input type="checkbox" checked="checked" onclick="return false;">
-              <span class="checkmark"></span>
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>Sodium</td>
-            <td>10.5g</td>
-            <td>10g</td>
-            <td>
-              <label class="cb">
-              <input type="checkbox" checked="checked" onclick="return false;">
-              <span class="checkmark"></span>
-              </label>
-            </td>
-          </tr>
-          <tr>
-            <td>Micronutrients</td>
-            <td>-</td>
-            <td>-</td>
-            <td>
-              <label class="cb">
-              <input type="checkbox" checked="checked" onclick="return false;">
-              <span class="checkmark"></span>
-              </label>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Good eater meter</h4>
-      <br><br>
-      <div class="row">
-        <div class="col-lg-4" style="height:30px;">
-          <div class="progress" style="height: 20px;width:100%;margin-bottom:10px;">
-            <div class="progress-bar progress-bar-danger" role="progressbar"
-             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-             style="width: 100%;">
-            </div>
-          </div>
-          <p style="opacity:0.5;">80%</p>
-        </div>
-        <div class="col-lg-4" style="height:30px;">
-          <div class="progress" style="height: 20px;width:100%">
-            <div class="progress-bar progress-bar-warning" role="progressbar"
-             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-             style="width: 100%;">
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4" style="height:30px;">
-          <div class="progress" style="height: 20px;width:100%;margin-bottom:10px;">
-            <div class="progress-bar progress-bar-info" role="progressbar"
-             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-             style="width: 100%;">
-            </div>
-          </div>
-          <p style="opacity:0.5;float:right;">100%</p>
-        </div>
+    <div class="main" style="padding-top: 5px;padding-left: 40px;padding-right: 0px;">
+      <div class="navbar">
+        <a href="#" class="right logout" style="font-size:small;"><span class="glyphicon glyphicon-log-out" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Logout</a>
+        <a href="/images/project_well_Nicole.pdf" class="right" download style="font-size:small"><span class="glyphicon glyphicon-file" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Survey</a>
+        <a href="#" class="js-call right" style="font-size:small"><span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;Order by phone</a>
+        <a href="{{pathFor 'well'}}" class="right" style="font-weight:bold">{{#if currentUser}}
+           Welcome {{currentUser.username}}
+        {{else}}
+           You better log in!!!
+        {{/if}}</a>
       </div>
-      <div class="row">
-        <div class="col-lg-4" style="text-align:center;">
-          <h4>Good</h4>
+      <div class="innerMain" style="width:95%">
+        <h4 style="background-color: #20B2AA; padding: 10px; color: white;">Nutrition Information for your weekly order:</h4>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col" class="op">Nutritions</th>
+              <th scope="col" class="op">Your needs</th>
+              <th scope="col" class="op">Your meals</th>
+              <th scope="col" class="op"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total calories</td>
+              <td>7000cal</td>
+              <td>7010cal</td>
+              <td>
+                <label class="cb">
+                <input type="checkbox" checked="checked" onclick="return false;">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Protein</td>
+              <td>390g</td>
+              <td>350g</td>
+              <td>
+                <label class="cb2">
+                <input type="checkbox" checked="checked" onclick="return false;">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Fats</td>
+              <td>308g</td>
+              <td>300g</td>
+              <td>
+                <label class="cb">
+                <input type="checkbox" checked="checked" onclick="return false;">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Sugars</td>
+              <td>102g</td>
+              <td>100g</td>
+              <td>
+                <label class="cb">
+                <input type="checkbox" checked="checked" onclick="return false;">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Fiber</td>
+              <td>175g</td>
+              <td>150g</td>
+              <td>
+                <label class="cb2">
+                <input type="checkbox" checked="checked" onclick="return false;">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Cholesterol</td>
+              <td>1.4g</td>
+              <td>1.3g</td>
+              <td>
+                <label class="cb">
+                <input type="checkbox" checked="checked" onclick="return false;">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Sodium</td>
+              <td>10.5g</td>
+              <td>10g</td>
+              <td>
+                <label class="cb">
+                <input type="checkbox" checked="checked" onclick="return false;">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Micronutrients</td>
+              <td>-</td>
+              <td>-</td>
+              <td>
+                <label class="cb">
+                <input type="checkbox" checked="checked" onclick="return false;">
+                <span class="checkmark"></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Good eater meter</h4>
+        <br><br>
+        <div class="row">
+          <div class="col-lg-4" style="height:30px;">
+            <div class="progress" style="height: 20px;width:100%;margin-bottom:10px;">
+              <div class="progress-bar progress-bar-danger" role="progressbar"
+               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+               style="width: 100%;">
+              </div>
+            </div>
+            <p style="opacity:0.5;">80%</p>
+          </div>
+          <div class="col-lg-4" style="height:30px;">
+            <div class="progress" style="height: 20px;width:100%">
+              <div class="progress-bar progress-bar-warning" role="progressbar"
+               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+               style="width: 100%;">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" style="height:30px;">
+            <div class="progress" style="height: 20px;width:100%;margin-bottom:10px;">
+              <div class="progress-bar progress-bar-info" role="progressbar"
+               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+               style="width: 100%;">
+              </div>
+            </div>
+            <p style="opacity:0.5;float:right;">100%</p>
+          </div>
         </div>
-        <div class="col-lg-4" style="text-align:center;">
-          <h4>Very good</h4>
+        <div class="row">
+          <div class="col-lg-4" style="text-align:center;">
+            <h4>Good</h4>
+          </div>
+          <div class="col-lg-4" style="text-align:center;">
+            <h4>Very good</h4>
+          </div>
+          <div class="col-lg-4" style="text-align:center;">
+            <h4 style="font-weight: bold;">Perfect!</h4>
+          </div>
         </div>
-        <div class="col-lg-4" style="text-align:center;">
-          <h4 style="font-weight: bold;">Perfect!</h4>
-        </div>
+        <br>
+        <footer class="container-fluid" style="text-align:center;padding:0px;">
+          <h4 style="font-weight:600;background-color:whitesmoke;padding:20px 85px;margin-bottom:20px;">
+            <img style="height:20%; float:left; width:10%; margin-right:-22px; margin-left:7px;margin-top:-10px;" src="images/food_icon.png">
+            <p style="margin-top: 8px; margin-right: 0px;">
+              <span style="color:#20B2AA;">Congratulations!</span> Your meal will be delivered on
+              <span style="color:#20b2aa;">08/30/2019</span>
+            </p>
+          </h4>
+          <h6 style="font-weight:600;opacity:0.9;margin-top:-7px;">Learn more about good eating habits and tips for your condition
+            <a style="text-decoration:underline;" href="https://www.choosemyplate.gov/ten-tips-healthy-eating-for-an-active-lifestyle">here</a>
+          </h6>
+        </footer>
       </div>
-      <br>
-      <footer class="container-fluid" style="text-align:center;padding-left:0px;padding-right:0px;">
-        <h4 style="font-weight:600;background-color:whitesmoke;padding:20px 85px;margin-bottom:20px;">
-          <img style="height:20%; float:left; width:10%; margin-right:-22px; margin-left:7px;margin-top:-10px;" src="images/food_icon.png">
-          <p style="margin-top: 8px; margin-right: 0px;">
-            <span style="color:#20B2AA;">Congratulations!</span> Your meal will be delivered on
-            <span style="color:#20b2aa;">08/30/2019</span>
-          </p>
-        </h4>
-        <h6 style="font-weight:600;opacity:0.9;margin-top:-7px;">Learn more about good eating habits and tips for your condition
-          <a style="text-decoration:underline;" href="https://www.choosemyplate.gov/ten-tips-healthy-eating-for-an-active-lifestyle">here</a>
-        </h6>
-      </footer>
     </div>
   </div>
 

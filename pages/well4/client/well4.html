@@ -30,14 +30,14 @@
   /* Style the top navigation bar */
   .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: none;
   }
 
   /* Style the navigation bar links */
   .navbar a {
     float: left;
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -201,17 +201,6 @@ button:hover {
   </style>
   </head>
   <body>
-  <div class="navbar">
-    <a href="#" class="right logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a>
-    <a href="/images/project_well_Nicole.pdf" class="right" download><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Survey</a>
-    <a href="#" class="js-call right"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Order by phone</a>
-    <a href="{{pathFor 'well'}}" class="right">{{#if currentUser}}
-       Welcome {{currentUser.username}}
-    {{else}}
-       You better log in!!!
-    {{/if}}</a>
-  </div>
-
   <div class="row" style="margin-left:0px;">
     <div class="side">
       <h2>Project<span style="color:#20B2AA;">WELL</span></h2><br>
@@ -267,80 +256,91 @@ button:hover {
       <button class="button button4 js-go-home" style="display:inline"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Go back to meal selection</button>
 
     </div>
-    <div style="padding-top:0px;" class="main">
-      <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Edit Preferences</h4><br>
-      <form action="/action_page.php">
-        <div class="form-group">
-          <div class="row">
-            <div class="col-lg-4">
-              <label class="control-label">Cuisine preference</label>
-              <select class="form-control js-select-cuisine selectpicker" multiple required>
-            		<option>Chinese</option>
-            		<option>Indian</option>
-            		<option>Japanese</option>
-            		<option>Korean</option>
-                <option>Kosher</option>
-            		<option>Mediterranean</option>
-                <option>Mexican</option>
-            		<option>Thai</option>
-            	</select>
+    <div class="main" style="padding-top: 5px;padding-left: 40px;padding-right: 0px;">
+      <div class="navbar">
+        <a href="#" class="right logout" style="font-size:small;"><span class="glyphicon glyphicon-log-out" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Logout</a>
+        <a href="/images/project_well_Nicole.pdf" class="right" download style="font-size:small"><span class="glyphicon glyphicon-file" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;&nbsp;Survey</a>
+        <a href="#" class="js-call right" style="font-size:small"><span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;Order by phone</a>
+        <a href="{{pathFor 'well'}}" class="right" style="font-weight:bold">{{#if currentUser}}
+           Welcome {{currentUser.username}}
+        {{else}}
+           You better log in!!!
+        {{/if}}</a>
+      </div>
+      <div class="innerMain" style="width:95%">
+        <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Edit Preferences</h4><br>
+        <form action="/action_page.php">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-4">
+                <label class="control-label">Cuisine preference</label>
+                <select class="form-control js-select-cuisine selectpicker" multiple required>
+              		<option>Chinese</option>
+              		<option>Indian</option>
+              		<option>Japanese</option>
+              		<option>Korean</option>
+                  <option>Kosher</option>
+              		<option>Mediterranean</option>
+                  <option>Mexican</option>
+              		<option>Thai</option>
+              	</select>
+              </div>
+              <div class="col-lg-4">
+                <label class="control-label">What food do you avoid?</label>
+                <!-- <div class="random" style="display: flex">
+                  <textarea style="width:80%;" class="form-control" rows="1" id="comment"></textarea>
+                  <button style="background: transparent; border:none;" class="glyphicon glyphicon-plus-sign" aria-hidden="true"></button>
+                </div> -->
+                <select class="form-control js-select-avoid selectpicker" multiple>
+              		<option>Eggplant</option>
+              		<option>Ginger</option>
+              		<option>3</option>
+              		<option>4</option>
+              		<option>5</option>
+              	</select>
+              </div>
             </div>
-            <div class="col-lg-4">
-              <label class="control-label">What food do you avoid?</label>
-              <!-- <div class="random" style="display: flex">
-                <textarea style="width:80%;" class="form-control" rows="1" id="comment"></textarea>
-                <button style="background: transparent; border:none;" class="glyphicon glyphicon-plus-sign" aria-hidden="true"></button>
-              </div> -->
-              <select class="form-control js-select-avoid selectpicker" multiple>
-            		<option>Eggplant</option>
-            		<option>Ginger</option>
-            		<option>3</option>
-            		<option>4</option>
-            		<option>5</option>
-            	</select>
+          </div><br>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-lg-4">
+                <label class="control-label">Sensitivities</label>
+                <select class="form-control js-select-sensitivities selectpicker" multiple>
+              		<option>Dairy</option>
+              		<option>Eggs</option>
+              		<option>Peanuts</option>
+              		<option>Shellfish</option>
+              		<option>Gluten</option>
+                  <option>Corn</option>
+              		<option>Soy</option>
+              		<option>Beef</option>
+              		<option>Pork</option>
+              		<option>Lamb</option>
+              	</select>
+              </div>
+              <div class="col-lg-4">
+                <label class="control-label">Allergies</label>
+                <select class="form-control js-select-allergies selectpicker" multiple>
+              		<option>---</option>
+              		<option>2</option>
+              		<option>3</option>
+              		<option>4</option>
+              		<option>5</option>
+              	</select>
+              </div>
             </div>
           </div>
-        </div><br>
-        <div class="form-group">
-          <div class="row">
-            <div class="col-lg-4">
-              <label class="control-label">Sensitivities</label>
-              <select class="form-control js-select-sensitivities selectpicker" multiple>
-            		<option>Dairy</option>
-            		<option>Eggs</option>
-            		<option>Peanuts</option>
-            		<option>Shellfish</option>
-            		<option>Gluten</option>
-                <option>Corn</option>
-            		<option>Soy</option>
-            		<option>Beef</option>
-            		<option>Pork</option>
-            		<option>Lamb</option>
-            	</select>
-            </div>
-            <div class="col-lg-4">
-              <label class="control-label">Allergies</label>
-              <select class="form-control js-select-allergies selectpicker" multiple>
-            		<option>---</option>
-            		<option>2</option>
-            		<option>3</option>
-            		<option>4</option>
-            		<option>5</option>
-            	</select>
-            </div>
-          </div>
-        </div>
-        <!-- <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> -->
-        <!-- <div class="checkbox">
-          <label><input type="checkbox"> Remember me</label>
-        </div> -->
-      </form>
-      <br><br>
-      <footer class="container-fluid">
-        <button class="js-submit button button1" type="submit">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
-        <button class="js-cancel button button2" type="submit">Cancel</button>
-      </footer>
-
+          <!-- <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> -->
+          <!-- <div class="checkbox">
+            <label><input type="checkbox"> Remember me</label>
+          </div> -->
+        </form>
+        <br><br>
+        <footer class="container-fluid">
+          <button class="js-submit button button1" type="submit">Save</button>&nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="js-cancel button button2" type="submit">Cancel</button>
+        </footer>
+      </div>
     </div>
   </div>
 
