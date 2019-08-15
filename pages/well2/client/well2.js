@@ -66,12 +66,12 @@ Template.well2.events({
 
     'click .js-go-home': function(event){
         event.preventDefault();
-        Router.go('/well');
+        Router.go('/meal_selecction');
     },
 
     'click .js-place-order': function(event){
         event.preventDefault();
-        Router.go('/well3');
+        Router.go('/order_placed');
     },
 
     "click .js-pusher": function(event,instance){

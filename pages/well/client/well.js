@@ -72,17 +72,17 @@ Template.well.events({
 
     'click .js-edit-preference': function(event){
         event.preventDefault();
-        Router.go('/well4');
+        Router.go('/preference');
     },
 
     'click .js-edit-demographic': function(event){
         event.preventDefault();
-        Router.go('/well5');
+        Router.go('/demographic');
     },
 
     'click .js-go-basket': function(event){
         event.preventDefault();
-        Router.go('/well2');
+        Router.go('/review_your_order');
     },
 
 		"click .js-add-basket": function(event,instance){

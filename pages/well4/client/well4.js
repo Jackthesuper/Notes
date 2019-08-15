@@ -43,17 +43,17 @@ Template.well4.events({
 				console.log(preference);
 				Meteor.call("submitPreferences", preference);
 				console.log("finished");
-        Router.go('/well');
+        Router.go('/meal_selecction');
     },
 
     'click .js-cancel': function(event){
         event.preventDefault();
-        Router.go('/well');
+        Router.go('/meal_selecction');
     },
 
     'click .js-go-home': function(event){
         event.preventDefault();
-        Router.go('/well');
+        Router.go('/meal_selecction');
     },
 
 		'click .js-call': function(event){

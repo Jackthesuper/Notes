@@ -41,7 +41,7 @@ Template.well6.events({
 
   'click .js-go-home': function(event){
       event.preventDefault();
-      Router.go('/well');
+      Router.go('/meal_selecction');
   },
 
 	'click .js-call': function(event){
@@ -51,12 +51,12 @@ Template.well6.events({
 
 	'click .js-edit-preference': function(event){
 			event.preventDefault();
-			Router.go('/well4');
+			Router.go('/preference');
 	},
 
 	'click .js-edit-demographic': function(event){
 			event.preventDefault();
-			Router.go('/well5');
+			Router.go('/demographic');
 	},
 
 });
