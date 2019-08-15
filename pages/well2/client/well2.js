@@ -79,6 +79,10 @@ Template.well2.events({
       const counter = "counter"+event.target.dataset.message;
       const c = instance.state.get(counter);
       const t = instance.state.get("total");
+      if(c==3){
+        window.alert("For each meal, you can only add 3 orders at most!");
+        return;
+      }
       if(t==10){
         window.alert("You can't add more than 10 meals!");
         return;

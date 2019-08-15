@@ -90,6 +90,10 @@ Template.well.events({
 			const counter = "counter"+event.target.dataset.message;
 			const c = instance.state.get(counter);
       const t = instance.state.get("total");
+      if(c==3){
+        window.alert("For each meal, you can only add 3 orders at most!");
+        return;
+      }
       if(t==10){
         window.alert("You can't add more than 10 meals!");
         return;
@@ -109,11 +113,6 @@ Template.well.events({
       }
       instance.state.set(counter,c-1);
       instance.state.set("total", t-1);
-    },
-
-    "click .js-close": function(event,instance){
-      event.preventDefault();
-			window.alert("This close button feature not available now!");
     },
 
     'click .js-call': function(event){

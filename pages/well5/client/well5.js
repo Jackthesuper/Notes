@@ -36,7 +36,7 @@ Template.well5.events({
 	"change .js-select-weight": function(event,template){
 	   const weight = $(event.target).val();
      const height = $(".js-height").val();
-     const bmi = weight/ (height*height);
+     const bmi = weight/ (height*height) *703;
      $(".js-bmi").val(Math.round(bmi));
      console.log(bmi);
 	},

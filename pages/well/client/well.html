@@ -455,12 +455,6 @@ transform: rotate(45deg);
   </style>
   </head>
   <body>
-
-  <div class="header">
-    <h1>ProjectWELL</h1>
-    <p>A demo created by Jack.</p>
-  </div>
-
   <div class="navbar">
     <a href="#" class="right logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a>
     <a href="/images/project_well_Nicole.pdf" class="right" download><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Survey</a>
@@ -508,7 +502,7 @@ transform: rotate(45deg);
       <h4><span class="label label1">Male</span> <span class="label label1">{{bmiCondition}}/ BMI {{demographic.bmi}}</span></h4>
       <h4><span class="label label1">Age 72</span> <span class="label label1">{{demographic.household}}</span></h4><br>
       <h5>
-        <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:#837cc4;"></span>&nbsp;Clinical Needs
+        <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:#837cc4;margin-right:-1px;"></span>&nbsp;Clinical Needs
       </h5>
       <h4><span class="label label2">Diabetes</span> <span class="label label2">High blood pressure</span></h4>
       <h4><span class="label label2">High cholesterol</span> <span class="label label2">Depression</span></h4><br>
@@ -517,12 +511,10 @@ transform: rotate(45deg);
         <span class="op2 js-edit-preference" style="cursor:pointer;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  Edit</span>
       </h5>
       <h4>
-        <span class="label label3">Food Delivery <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
-        <span class="label label3">{{preference}} <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
+        <span class="label label3">Food Delivery</span> <span class="label label3">{{preference}}</span>
       </h4>
       <h4>
-        <span class="label label3">{{preference2}} <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
-        <span class="label label3">Plant-based <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
+        <span class="label label3">{{preference2}}</span> <span class="label label3">Plant-based</span>
       </h4><br>
 
       <h4>Your weekly selection: <span class="op2" style="float:right;">{{theTotal}}/10</span></h4>
@@ -545,7 +537,7 @@ transform: rotate(45deg);
               <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 0px;">
                 <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;">
                   <div class="col-sm-5" style="padding: 0px;">
-                    <span class="op3">Calories: 200 </span>
+                    <span class="op3">Calories: 200</span>
                   </div>
                   <div class="col-sm-1" style="padding:0px;">
                     <label class="cb3">
@@ -598,7 +590,7 @@ transform: rotate(45deg);
             {{else}}
           	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
             <button class="button button7 js-minus-basket" data-message=1>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 1}}</span>
+              <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 1}}</span>
               <button class="button button7 js-add-basket" data-message=1>+</button>
             </button>
             {{/if}}
@@ -826,7 +818,7 @@ transform: rotate(45deg);
             {{else}}
           	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
             <button class="button button7 js-minus-basket" data-message=2>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 2}}</span>
+              <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 2}}</span>
               <button class="button button7 js-add-basket" data-message=2>+</button>
             </button>
             {{/if}}
@@ -1053,7 +1045,7 @@ transform: rotate(45deg);
             {{else}}
           	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
             <button class="button button7 js-minus-basket" data-message=3>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 3}}</span>
+              <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 3}}</span>
               <button class="button button7 js-add-basket" data-message=3>+</button>
             </button>
             {{/if}}
@@ -1284,7 +1276,7 @@ transform: rotate(45deg);
             {{else}}
           	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
             <button class="button button7 js-minus-basket" data-message=4>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 4}}</span>
+              <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 4}}</span>
               <button class="button button7 js-add-basket" data-message=4>+</button>
             </button>
             {{/if}}
@@ -1512,7 +1504,7 @@ transform: rotate(45deg);
             {{else}}
           	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
             <button class="button button7 js-minus-basket" data-message=5>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 5}}</span>
+              <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 5}}</span>
               <button class="button button7 js-add-basket" data-message=5>+</button>
             </button>
             {{/if}}
@@ -1739,7 +1731,7 @@ transform: rotate(45deg);
             {{else}}
           	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
             <button class="button button7 js-minus-basket" data-message=6>-</button>
-              <span style="border:none;padding:2px;background-color:white;color:black" class="random">{{theCounterNumber 6}}</span>
+              <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 6}}</span>
               <button class="button button7 js-add-basket" data-message=6>+</button>
             </button>
             {{/if}}

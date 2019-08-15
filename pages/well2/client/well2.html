@@ -246,12 +246,6 @@ button:hover {
   </style>
   </head>
   <body>
-
-  <div class="header">
-    <h1>ProjectWELL</h1>
-    <p>A demo created by Jack.</p>
-  </div>
-
   <div class="navbar">
     <a href="#" class="right logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a>
     <a href="/images/project_well_Nicole.pdf" class="right" download><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Survey</a>
@@ -299,7 +293,7 @@ button:hover {
       <h4><span class="label label1">Male</span> <span class="label label1">{{bmiCondition}}/ BMI {{demographic.bmi}}</span></h4>
       <h4><span class="label label1">Age 72</span> <span class="label label1">{{demographic.household}}</span></h4><br>
       <h5>
-        <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:#837cc4;"></span>&nbsp;Clinical Needs
+        <span class="glyphicon glyphicon-plus" aria-hidden="true" style="color:#837cc4;margin-right:-1px;"></span>&nbsp;Clinical Needs
       </h5>
       <h4><span class="label label2">Diabetes</span> <span class="label label2">High blood pressure</span></h4>
       <h4><span class="label label2">High cholesterol</span> <span class="label label2">Depression</span></h4><br>
@@ -308,12 +302,10 @@ button:hover {
         <span class="op2 js-edit-preference" style="cursor:pointer;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>  Edit</span>
       </h5>
       <h4>
-        <span class="label label3">Food Delivery <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
-        <span class="label label3">{{preference}} <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
+        <span class="label label3">Food Delivery</span> <span class="label label3">{{preference}}</span>
       </h4>
       <h4>
-        <span class="label label3">{{preference2}} <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
-        <span class="label label3">Plant-based <span class="js-close glyphicon glyphicon-remove" style="cursor:pointer;" aria-hidden="true"></span></span>
+        <span class="label label3">{{preference2}}</span> <span class="label label3">Plant-based</span>
       </h4><br>
 
       <h4>Your weekly selection: <span class="op2" style="float:right;">{{theTotal}}/10</span></h4>
@@ -342,10 +334,31 @@ button:hover {
               <span class="random">{{theCounter 1}}</span>
               <button style="font-size:17px; margin-left: -4px;;" data-message=1 class="button button5 js-pusher">+</button>
             </td>
-            <td style="padding: 0px;vertical-align:middle; width:14%">
-              <h6>Calories: 200</h6>
-              <h6>Protein: 20g</h6>
-              <h6>Fat: 7g</h6>
+            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
+              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Calories:
+                </div>
+                <div class="col-sm-5">
+                  200
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Protein
+                </div>
+                <div class="col-sm-5">
+                  20g
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Fat:
+                </div>
+                <div class="col-sm-5">
+                  7g
+                </div>
+              </div>
             </td>
             <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">94%</div></td>
             <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
@@ -362,10 +375,31 @@ button:hover {
               <span class="random">{{theCounter 2}}</span>
               <button style="font-size:17px; margin-left: -4px;;" data-message=2 class="button button5 js-pusher">+</button>
             </td>
-            <td style="padding: 0px;vertical-align:middle; width:14%">
-              <h6>Calories: 200</h6>
-              <h6>Protein: 20g</h6>
-              <h6>Fat: 7g</h6>
+            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
+              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Calories:
+                </div>
+                <div class="col-sm-5">
+                  200
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Protein
+                </div>
+                <div class="col-sm-5">
+                  20g
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Fat:
+                </div>
+                <div class="col-sm-5">
+                  7g
+                </div>
+              </div>
             </td>
             <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle2">89%</div></td>
             <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
@@ -382,10 +416,31 @@ button:hover {
               <span class="random">{{theCounter 3}}</span>
               <button style="font-size:17px; margin-left: -4px;;" data-message=3 class="button button5 js-pusher">+</button>
             </td>
-            <td style="padding: 0px;vertical-align:middle; width:14%">
-              <h6>Calories: 200</h6>
-              <h6>Protein: 20g</h6>
-              <h6>Fat: 7g</h6>
+            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
+              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Calories:
+                </div>
+                <div class="col-sm-5">
+                  200
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Protein
+                </div>
+                <div class="col-sm-5">
+                  20g
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Fat:
+                </div>
+                <div class="col-sm-5">
+                  7g
+                </div>
+              </div>
             </td>
             <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle3">75%</div></td>
             <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
@@ -402,10 +457,31 @@ button:hover {
               <span class="random">{{theCounter 4}}</span>
               <button style="font-size:17px; margin-left: -4px;;" data-message=4 class="button button5 js-pusher">+</button>
             </td>
-            <td style="padding: 0px;vertical-align:middle; width:14%">
-              <h6>Calories: 200</h6>
-              <h6>Protein: 20g</h6>
-              <h6>Fat: 7g</h6>
+            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
+              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Calories:
+                </div>
+                <div class="col-sm-5">
+                  200
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Protein
+                </div>
+                <div class="col-sm-5">
+                  20g
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Fat:
+                </div>
+                <div class="col-sm-5">
+                  7g
+                </div>
+              </div>
             </td>
             <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">91%</div></td>
             <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
@@ -422,10 +498,31 @@ button:hover {
               <span class="random">{{theCounter 5}}</span>
               <button style="font-size:17px; margin-left: -4px;;" data-message=5 class="button button5 js-pusher">+</button>
             </td>
-            <td style="padding: 0px;vertical-align:middle; width:14%">
-              <h6>Calories: 200</h6>
-              <h6>Protein: 20g</h6>
-              <h6>Fat: 7g</h6>
+            <td style="padding: 8px;vertical-align:middle; width:14%;text-algin:left;">
+              <div class="row" style="font-size:12px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Calories:
+                </div>
+                <div class="col-sm-5">
+                  200
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Protein
+                </div>
+                <div class="col-sm-5">
+                  20g
+                </div>
+              </div>
+              <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;text-align:left;margin-bottom:-10px;">
+                <div class="col-sm-7">
+                  Fat:
+                </div>
+                <div class="col-sm-5">
+                  7g
+                </div>
+              </div>
             </td>
             <td style="padding: 0px;vertical-align:middle; width:17%"><div class="numberCircle1">90%</div></td>
             <td style="padding: 0px;vertical-align:middle; border-right: 1px solid #ddd;position:relative;">
