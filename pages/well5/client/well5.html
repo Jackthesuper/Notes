@@ -30,10 +30,20 @@
 
   h4{
     font-size: 16px;
+    color: #595959;
   }
 
   h5{
-    font-size: 13px;
+    font-size: 12px;
+    color: #595959;
+  }
+
+  h6{
+    color: #595959;
+  }
+
+  p{
+    color: #595959;
   }
 
   /* Style the top navigation bar */
@@ -46,10 +56,24 @@
   .navbar a {
     float: left;
     display: block;
-    color: black;
+    color: #595959;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+  }
+
+  .navbar p {
+    float: left;
+    display: block;
+    color: #595959;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  /* Right-aligned link */
+  .navbar p.right {
+    float: right;
   }
 
   /* Right-aligned link */
@@ -85,19 +109,22 @@
   /* Sidebar/left column */
   .side {
     -ms-flex: 25%; /* IE10 */
-    flex: 25%;
+    /* flex: 25%; */
+    width:25%;
     background-color: #f1f1f1;
-    padding: 20px;
+    padding: 3%;
     position: fixed;
+    padding-top: 1%;
   }
 
   /* Main column */
   .main {
     -ms-flex: 75%; /* IE10 */
-    flex: 75%;
+    /* flex: 75%; */
+    width: 72%;
     background-color: white;
     padding: 20px;
-    margin-left: 270px;
+    margin-left: 400px;
   }
 
   /* Fake image, just for this example */
@@ -193,6 +220,11 @@ button:hover {
     }
   }
 
+  .label{
+      line-height: 2;
+      margin: 2px;
+  }
+
   .label1{
     color: #607596;
     border: 1px solid #607596;
@@ -242,9 +274,9 @@ button:hover {
   <body>
   <div class="row" style="margin-left:0px;">
     <div class="side">
-      <img style="padding:20px 0px;width:200px;" src="images/PWLogo.png"><br>
-      <h4>Recommended diet:</h4><br>
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#f44336;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Sodium</span>
+      <a href="{{pathFor 'well'}}"><img style="padding:20px 0px;width:200px;" src="images/PWLogo.png"></a><br>
+      <h4 style="margin-bottom:0px;">Recommended diet:</h4><br>
+      <span class="progress-title" style="font-size:smaller"><span style="line-height:0px;color:#f44336;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Sodium</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-danger" role="progressbar"
          aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
@@ -252,7 +284,7 @@ button:hover {
         </div>
       </div>
 
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#ff9800;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Glycemic</span>
+      <span class="progress-title" style="font-size:smaller"><span style="line-height:0px;color:#ff9800;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Glycemic</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-warning" role="progressbar"
          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
@@ -260,7 +292,7 @@ button:hover {
         </div>
       </div>
 
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#20b2aa;" class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Protein</span>
+      <span class="progress-title" style="font-size:smaller"><span style="line-height:0px;color:#20b2aa;" class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Protein</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-info" role="progressbar"
          aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"

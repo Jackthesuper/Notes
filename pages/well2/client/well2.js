@@ -104,6 +104,16 @@ Template.well2.events({
       instance.state.set("total", t-1);
     },
 
+    'click .js-edit-preference': function(event){
+  			event.preventDefault();
+  			Router.go('/preference');
+  	},
+
+  	'click .js-edit-demographic': function(event){
+  			event.preventDefault();
+  			Router.go('/demographic');
+  	},
+    
     "click .js-close": function(event,instance){
       event.preventDefault();
       window.alert("This close button feature not available now!");

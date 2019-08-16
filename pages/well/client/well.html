@@ -38,10 +38,20 @@
 
   h4{
     font-size: 16px;
+    color: #595959;
   }
 
   h5{
-    font-size: 13px;
+    font-size: 12px;
+    color: #595959;
+  }
+
+  h6{
+    color: #595959;
+  }
+
+  p{
+    color: #595959;
   }
 
   /* Style the top navigation bar */
@@ -55,10 +65,24 @@
   .navbar a {
     float: left;
     display: block;
-    color: black;
+    color: #595959;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+  }
+
+  .navbar p {
+    float: left;
+    display: block;
+    color: #595959;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  /* Right-aligned link */
+  .navbar p.right {
+    float: right;
   }
 
   /* Right-aligned link */
@@ -84,19 +108,22 @@
   /* Sidebar/left column */
   .side {
     -ms-flex: 25%; /* IE10 */
-    flex: 25%;
+    /* flex: 25%; */
+    width:25%;
     background-color: #f1f1f1;
-    padding: 20px;
-    position:fixed;
+    padding: 3%;
+    position: fixed;
+    padding-top: 1%;
   }
 
   /* Main column */
   .main {
     -ms-flex: 75%; /* IE10 */
-    flex: 75%;
+    /* flex: 75%; */
+    width: 72%;
     background-color: white;
     padding: 20px;
-    margin-left: 270px;
+    margin-left: 400px;
   }
 
   .meal {
@@ -133,6 +160,10 @@
 
   .progress-bar-info{
     background-color: #20b2aa;
+  }
+
+  button{
+    font-weight: 700;
   }
 
   .button4 {
@@ -450,6 +481,12 @@ transform: rotate(45deg);
   top: 20%;
 }
 
+.label{
+    line-height: 2;
+    margin: 2px;
+}
+
+
 .label1{
   color: #607596;
   border: 1px solid #607596;
@@ -500,9 +537,9 @@ transform: rotate(45deg);
   <div class="row" style="margin-left:0px;">
     <div class="side">
       <!-- <h2>Project<span style="color:#20B2AA;">WELL</span></h2><br> -->
-      <img style="padding:20px 0px;width:200px;" src="images/PWLogo.png"><br>
-      <h4>Recommended diet:</h4><br>
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#f44336;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Sodium</span>
+      <a href="{{pathFor 'well'}}"><img style="padding:20px 0px;width:200px;" src="images/PWLogo.png"></a><br>
+      <h4 style="margin-bottom:0px;">Recommended diet:</h4><br>
+      <span class="progress-title" style="font-size:smaller"><span style="line-height:0px;color:#f44336;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Sodium</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-danger" role="progressbar"
          aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
@@ -510,7 +547,7 @@ transform: rotate(45deg);
         </div>
       </div>
 
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#ff9800;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Glycemic</span>
+      <span class="progress-title" style="font-size:smaller"><span style="line-height:0px;color:#ff9800;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Glycemic</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-warning" role="progressbar"
          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
@@ -518,7 +555,7 @@ transform: rotate(45deg);
         </div>
       </div>
 
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#20b2aa;" class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Protein</span>
+      <span class="progress-title" style="font-size:smaller"><span style="line-height:0px;color:#20b2aa;" class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Protein</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-info" role="progressbar"
          aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
@@ -567,26 +604,26 @@ transform: rotate(45deg);
           <span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;
           <span class="custom">Order by phone</span>
         </a>
-        <a href="{{pathFor 'well'}}" class="right" style="font-weight:bold">{{#if currentUser}}
+        <p class="right" style="font-weight:bold">{{#if currentUser}}
            Welcome {{currentUser.username}}
         {{else}}
            You better log in!!!
-        {{/if}}</a>
+        {{/if}}</p>
       </div>
       <div class="innerMain" style="width:95%">
-        <div class="row">
+        <div class="row" style="position:relative">
           <h3 style="padding-left:13px;">Prepared Meals</h3>
-          <h4 style="margin-top:20px;padding-left:447px"><span style="font-size:24px;color:#20b2aa;">21</span> to select from</h4>
+          <h4 style="margin-top:20px;position:absolute;right:7%;"><span style="font-size:24px;color:#20b2aa;">21</span> to select from</h4>
         </div>
         <div class="row" style="width:100%">
           <div class="col-lg-4">
             <!-- Trigger the modal with a button -->
-            <div class="meal" style="text-align:center;position:relative;">
-              <div class="topright" style="right:11px;">95%</div>
-              <button type="button" style="background-color:white;border:none;padding-bottom:5px;" data-toggle="modal" data-target="#myModal">
+            <div class="meal" style="text-align:center;position:relative;width:90%;">
+              <div class="topright">95%</div>
+              <button type="button" style="background-color:white;border:none;padding-bottom:5px;width:275px" data-toggle="modal" data-target="#myModal">
                 <img style="height:130px;" src="images/z_n_t_b.jpg">
-                <h4 style="padding:0px 22px; text-align:left;">Zucchini noodles with turkey Bolognese</h4>
-                <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 0px;">
+                <h4 style="margin-left:13%;width:195px; text-align:left;">Zucchini noodles with turkey Bolognese</h4>
+                <div class="inner-meal" style="display:inline-block;text-align:left;width:195px; padding:1px 0px;">
                   <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;">
                     <div class="col-sm-5" style="padding: 0px;">
                       <span class="op3">Calories: 200</span>
@@ -633,7 +670,7 @@ transform: rotate(45deg);
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
-                      <span class="op2" style="margin-left:76px;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
+                      <span class="op2" style="margin-left:44%;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
                   </div>
                 </div>
               </button>
@@ -642,7 +679,7 @@ transform: rotate(45deg);
               {{else}}
             	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
               <button class="button button7 js-minus-basket" data-message=1>-</button>
-                <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 1}}</span>
+                <span style="border:none;padding:2px 5px;background-color:white;color:#595959;font-weight:400;border-radius:3px;" class="random">{{theCounterNumber 1}}</span>
                 <button class="button button7 js-add-basket" data-message=1>+</button>
               </button>
               {{/if}}
@@ -809,12 +846,12 @@ transform: rotate(45deg);
           </div>
           <div class="col-lg-4">
             <!-- Trigger the modal with a button -->
-            <div class="meal" style="text-align:center;">
+            <div class="meal" style="text-align:center;position:relative;width:90%;">
               <div class="topright">94%</div>
-              <button type="button" style="background-color:white;border:none;padding-bottom:5px;" data-toggle="modal" data-target="#myModal2">
+              <button type="button" style="background-color:white;border:none;padding-bottom:5px;width:275px" data-toggle="modal" data-target="#myModal2">
                 <img style="height:130px;" src="images/s_a_a_p.jpg">
-                <h4 style="padding:0px 22px; text-align:left;">Shrimp, avocado and brown rice pesto</h4>
-                <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 0px;">
+                <h4 style="margin-left:13%;width:195px; text-align:left;">Shrimp, avocado and brown rice pesto</h4>
+                <div class="inner-meal" style="display:inline-block;text-align:left;width:195px; padding:1px 0px;">
                   <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;">
                     <div class="col-sm-5" style="padding: 0px;">
                       <span class="op3">Calories: 200 </span>
@@ -861,7 +898,7 @@ transform: rotate(45deg);
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
-                      <span class="op2" style="margin-left:76px;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
+                      <span class="op2" style="margin-left:44%;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
                   </div>
                 </div>
               </button>
@@ -870,7 +907,7 @@ transform: rotate(45deg);
               {{else}}
             	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
               <button class="button button7 js-minus-basket" data-message=2>-</button>
-                <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 2}}</span>
+                <span style="border:none;padding:2px 5px;background-color:white;color:#595959;font-weight:400;border-radius:3px;" class="random">{{theCounterNumber 2}}</span>
                 <button class="button button7 js-add-basket" data-message=2>+</button>
               </button>
               {{/if}}
@@ -1036,12 +1073,12 @@ transform: rotate(45deg);
           </div>
           <div class="col-lg-4">
             <!-- Trigger the modal with a button -->
-            <div class="meal" style="text-align:center;">
+            <div class="meal" style="text-align:center;position:relative;width:90%;">
               <div class="topright">91%</div>
-              <button type="button" style="background-color:white;border:none;padding-bottom:5px;" data-toggle="modal" data-target="#myModal3">
+              <button type="button" style="background-color:white;border:none;padding-bottom:5px;width:275px" data-toggle="modal" data-target="#myModal3">
                 <img style="height:130px;" src="images/v_c_w_s_p.jpg">
-                <h4 style="padding:0px 22px; text-align:left;">Veg. chili with sweet potato & black beans</h4>
-                <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 0px;">
+                <h4 style="margin-left:13%;width:195px; text-align:left;">Veg. chili with sweet potato & black beans</h4>
+                <div class="inner-meal" style="display:inline-block;text-align:left;width:195px; padding:1px 0px;">
                   <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;">
                     <div class="col-sm-5" style="padding: 0px;">
                       <span class="op3">Calories: 200 </span>
@@ -1088,7 +1125,7 @@ transform: rotate(45deg);
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
-                      <span class="op2" style="margin-left:76px;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 3 min</span>
+                      <span class="op2" style="margin-left:44%;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 3 min</span>
                   </div>
                 </div>
               </button>
@@ -1097,7 +1134,7 @@ transform: rotate(45deg);
               {{else}}
             	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
               <button class="button button7 js-minus-basket" data-message=3>-</button>
-                <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 3}}</span>
+                <span style="border:none;padding:2px 5px;background-color:white;color:#595959;font-weight:400;border-radius:3px;" class="random">{{theCounterNumber 3}}</span>
                 <button class="button button7 js-add-basket" data-message=3>+</button>
               </button>
               {{/if}}
@@ -1267,12 +1304,12 @@ transform: rotate(45deg);
         <div class="row" style="width:100%;">
           <div class="col-lg-4">
             <!-- Trigger the modal with a button -->
-            <div class="meal" style="text-align:center;">
+            <div class="meal" style="text-align:center;position:relative;width:90%;">
               <div class="topright">90%</div>
-              <button type="button" style="background-color:white;border:none;padding-bottom:5px;" data-toggle="modal" data-target="#myModal4">
+              <button type="button" style="background-color:white;border:none;padding-bottom:5px;width:275px" data-toggle="modal" data-target="#myModal4">
                 <img style="height:130px;" src="images/c_t_w_c_w_b_s.jpg">
-                <h4 style="padding:0px 22px; text-align:left;">Chicken thighs with cucumber salad</h4>
-                <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 0px;">
+                <h4 style="margin-left:13%;width:195px; text-align:left;">Chicken thighs with cucumber salad</h4>
+                <div class="inner-meal" style="display:inline-block;text-align:left;width:195px; padding:1px 0px;">
                   <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;">
                     <div class="col-sm-5" style="padding: 0px;">
                       <span class="op3">Calories: 200 </span>
@@ -1319,7 +1356,7 @@ transform: rotate(45deg);
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
-                      <span class="op2" style="margin-left:76px;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
+                      <span class="op2" style="margin-left:44%;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
                   </div>
                 </div>
               </button>
@@ -1328,7 +1365,7 @@ transform: rotate(45deg);
               {{else}}
             	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
               <button class="button button7 js-minus-basket" data-message=4>-</button>
-                <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 4}}</span>
+                <span style="border:none;padding:2px 5px;background-color:white;color:#595959;font-weight:400;border-radius:3px;" class="random">{{theCounterNumber 4}}</span>
                 <button class="button button7 js-add-basket" data-message=4>+</button>
               </button>
               {{/if}}
@@ -1495,12 +1532,12 @@ transform: rotate(45deg);
           </div>
           <div class="col-lg-4">
             <!-- Trigger the modal with a button -->
-            <div class="meal" style="text-align:center;">
+            <div class="meal" style="text-align:center;position:relative;width:90%;">
               <div class="topright" style="background-color:orange">89%</div>
-              <button type="button" style="background-color:white;border:none;padding-bottom:5px;" data-toggle="modal" data-target="#myModal5">
+              <button type="button" style="background-color:white;border:none;padding-bottom:5px;width:275px;" data-toggle="modal" data-target="#myModal5">
                 <img style="height:130px;" src="images/r_v_o_l.jpg">
-                <h4 style="padding:0px 22px; text-align:left;">Roasted vegetables & greens over lentils</h4>
-                <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 0px;">
+                <h4 style="margin-left:13%;width:195px; text-align:left;">Roasted vegetables & greens over lentils</h4>
+                <div class="inner-meal" style="display:inline-block;text-align:left;width:195px; padding:1px 0px;">
                   <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;">
                     <div class="col-sm-5" style="padding: 0px;">
                       <span class="op3">Calories: 200 </span>
@@ -1547,7 +1584,7 @@ transform: rotate(45deg);
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
-                      <span class="op2" style="margin-left:76px;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
+                      <span class="op2" style="margin-left:44%;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 2 min</span>
                   </div>
                 </div>
               </button>
@@ -1556,7 +1593,7 @@ transform: rotate(45deg);
               {{else}}
             	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
               <button class="button button7 js-minus-basket" data-message=5>-</button>
-                <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 5}}</span>
+                <span style="border:none;padding:2px 5px;background-color:white;color:#595959;font-weight:400;border-radius:3px;" class="random">{{theCounterNumber 5}}</span>
                 <button class="button button7 js-add-basket" data-message=5>+</button>
               </button>
               {{/if}}
@@ -1722,12 +1759,12 @@ transform: rotate(45deg);
           </div>
           <div class="col-lg-4">
             <!-- Trigger the modal with a button -->
-            <div class="meal" style="text-align:center;">
+            <div class="meal" style="text-align:center;position:relative;width:90%;">
               <div class="topright" style="background-color:orangered">75%</div>
-              <button type="button" style="background-color:white;border:none;padding-bottom:5px;" data-toggle="modal" data-target="#myModal6">
+              <button type="button" style="background-color:white;border:none;padding-bottom:5px;width:275px" data-toggle="modal" data-target="#myModal6">
                 <img style="height:130px;" src="images/a_a_h_f.jpg">
-                <h4 style="padding:0px 22px; text-align:left;">Asparagus, artichoke heart frittata</h4>
-                <div class="inner-meal" style="display:inline-block;text-align:left;width:82%; padding:1px 0px;">
+                <h4 style="margin-left:13%;width:195px; text-align:left;">Asparagus, artichoke heart frittata</h4>
+                <div class="inner-meal" style="display:inline-block;text-align:left;width:195px; padding:1px 0px;">
                   <div class="row" style="font-size:11px; margin-left:0px; margin-right:0px;">
                     <div class="col-sm-5" style="padding: 0px;">
                       <span class="op3">Calories: 200 </span>
@@ -1774,7 +1811,7 @@ transform: rotate(45deg);
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star checked" style="margin-top:1px;"></span>
                       <span class="fa fa-star unchecked" style="margin-top:1px;"></span>
-                      <span class="op2" style="margin-left:76px;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 3 min</span>
+                      <span class="op2" style="margin-left:44%;margin-top:-2px;"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 3 min</span>
                   </div>
                 </div>
               </button>
@@ -1783,7 +1820,7 @@ transform: rotate(45deg);
               {{else}}
             	<button class="button button6" type="button"><i class="fas fa-shopping-basket"></i>&nbsp; In your basket
               <button class="button button7 js-minus-basket" data-message=6>-</button>
-                <span style="border:none;padding:2px 5px;background-color:white;color:black;border-radius:3px;" class="random">{{theCounterNumber 6}}</span>
+                <span style="border:none;padding:2px 5px;background-color:white;color:#595959;font-weight:400;border-radius:3px;" class="random">{{theCounterNumber 6}}</span>
                 <button class="button button7 js-add-basket" data-message=6>+</button>
               </button>
               {{/if}}

@@ -18,10 +18,20 @@
 
   h4{
     font-size: 16px;
+    color: #595959;
   }
 
   h5{
-    font-size: 13px;
+    font-size: 12px;
+    color: #595959;
+  }
+
+  h6{
+    color: #595959;
+  }
+
+  p{
+    color: #595959;
   }
   /* Header/logo Title */
   .header {
@@ -46,10 +56,24 @@
   .navbar a {
     float: left;
     display: block;
-    color: black;
+    color: #595959;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
+  }
+
+  .navbar p {
+    float: left;
+    display: block;
+    color: #595959;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  /* Right-aligned link */
+  .navbar p.right {
+    float: right;
   }
 
   /* Right-aligned link */
@@ -85,19 +109,22 @@
   /* Sidebar/left column */
   .side {
     -ms-flex: 25%; /* IE10 */
-    flex: 25%;
+    /* flex: 25%; */
+    width:25%;
     background-color: #f1f1f1;
-    padding: 20px;
+    padding: 3%;
     position: fixed;
+    padding-top: 1%;
   }
 
   /* Main column */
   .main {
     -ms-flex: 75%; /* IE10 */
-    flex: 75%;
+    /* flex: 75%; */
+    width: 72%;
     background-color: white;
     padding: 20px;
-    margin-left: 270px;
+    margin-left: 400px;
   }
 
   /* Fake image, just for this example */
@@ -118,11 +145,16 @@
   .progress-title{
     float: left;
     line-height: 3px;
-    width: 40%
+    width: 40%;
+    font-size: smaller;
   }
 
   .progress-bar-info{
     background-color: #20b2aa;
+  }
+
+  button{
+    font-weight: 700;
   }
 
   .button4 {
@@ -261,6 +293,10 @@ border-width: 0 3px 3px 0;
 -ms-transform: rotate(45deg);
 transform: rotate(45deg);
 }
+.label{
+    line-height: 2;
+    margin: 2px;
+}
 
 .label1{
   color: #607596;
@@ -318,7 +354,7 @@ transform: rotate(45deg);
 }
 
 .numberCircle1 {
-    left: 600px;
+    left: 80%;
     top: 11px;
     width: 40px;
     line-height: 40px;
@@ -332,7 +368,7 @@ transform: rotate(45deg);
 }
 
 .numberCircle2 {
-    left: 400px;
+    left: 60%;
     top: 11px;
     width: 40px;
     line-height: 40px;
@@ -340,7 +376,7 @@ transform: rotate(45deg);
     text-align: center;
     font-size: 13px;
     border: none;
-    background-color: darkgrey;
+    background-color: #bbb;
     color: white;
     display: inline-block;
 }
@@ -384,7 +420,7 @@ transform: rotate(45deg);
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 
-  border-top: 16px solid darkgrey;
+  border-top: 16px solid #bbb;
 }
 
 .arrow-down3 {
@@ -403,9 +439,9 @@ transform: rotate(45deg);
   <body>
   <div class="row" style="margin-left:0px;">
     <div class="side">
-      <img style="padding:20px 0px;width:200px;" src="images/PWLogo.png"><br>
-      <h4>Recommended diet:</h4><br>
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#f44336;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Sodium</span>
+      <a href="{{pathFor 'well'}}"><img style="padding:20px 0px;width:200px;" src="images/PWLogo.png"></a><br>
+      <h4 style="margin-bottom:0px;">Recommended diet:</h4><br>
+      <span class="progress-title"><span style="line-height:0px;color:#f44336;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Sodium</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-danger" role="progressbar"
          aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
@@ -413,7 +449,7 @@ transform: rotate(45deg);
         </div>
       </div>
 
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#ff9800;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Glycemic</span>
+      <span class="progress-title"><span style="line-height:0px;color:#ff9800;" class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span> Glycemic</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-warning" role="progressbar"
          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
@@ -421,7 +457,7 @@ transform: rotate(45deg);
         </div>
       </div>
 
-      <span class="progress-title"><span style="font-size:small;line-height:0px;color:#20b2aa;" class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Protein</span>
+      <span class="progress-title"><span style="line-height:0px;color:#20b2aa;" class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span> Protein</span>
       <div class="progress" style="height: 5px;width:45%">
         <div class="progress-bar progress-bar-info" role="progressbar"
          aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
@@ -472,11 +508,11 @@ transform: rotate(45deg);
           <span class="glyphicon glyphicon-earphone" aria-hidden="true" style="color:#20b2aa;"></span>&nbsp;
           <span class="custom">Order by phone</span>
         </a>
-        <a href="{{pathFor 'well'}}" class="right" style="font-weight:bold">{{#if currentUser}}
+        <p class="right" style="font-weight:bold;margin-top:-2px;">{{#if currentUser}}
            Welcome {{currentUser.username}}
         {{else}}
            You better log in!!!
-        {{/if}}</a>
+        {{/if}}</p>
       </div>
       <div class="innerMain" style="width:95%">
         <h4 style="background-color: #20B2AA; padding: 10px; color: white;">Nutrition Information for your weekly order:</h4>
@@ -620,17 +656,17 @@ transform: rotate(45deg);
 
 
         <div id="grad1" style="position:relative">
-          <div class="arrow-down3" style="position:absolute; left:458px;"></div>
-          <div class="arrow-down3" style="position:absolute; left:614px;"></div>
+          <div class="arrow-down3" style="position:absolute; left:65.6%;"></div>
+          <div class="arrow-down3" style="position:absolute; left:81.4%;"></div>
         	<div class="row">
             <div class="col-sm-4" style="text-align:left;color:white;">
-              <h4 style="margin-left:30px; margin-top:9px;font-size:small;">GOOD</h4>
+              <h4 style="margin-left:30px; margin-top:9px;font-size:small;color: white;">GOOD</h4>
             </div>
             <div class="col-sm-4" style="text-align:center;color:white;">
-              <h4 style="margin-top:9px;font-size:small;">VERY GOOD</h4>
+              <h4 style="margin-top:9px;font-size:small;color:white;">VERY GOOD</h4>
             </div>
             <div class="col-sm-4" style="text-align:right;color:white;">
-              <h4 style="margin-right:30px;margin-top:9px;font-size:small;font-weight: bold;">PERFECT!</h4>
+              <h4 style="margin-right:30px;margin-top:9px;font-size:small;font-weight: bold;color:white;">PERFECT!</h4>
             </div>
           </div>
         </div>
@@ -645,13 +681,13 @@ transform: rotate(45deg);
         <br>
         <footer class="container-fluid" style="text-align:center;padding:0px;">
           <h4 style="font-weight:600;background-color:whitesmoke;padding:25px 85px;margin-bottom:35px;margin-top:30px">
-            <img style="height:20%; float:left; width:10%; margin-right:-22px; margin-left:7px;margin-top:-12px;" src="images/food_icon.png">
-            <p style="margin-top: 8px; margin-right: 0px;font-weight:700">
+            <img style="float:left; width:8%; margin-right:-22px; margin-left:96px;margin-top:-13px;" src="images/food_icon.png">
+            <p style="margin-top: 8px; margin-right: 0px;font-weight:700;font-size:larger">
               <span style="color:#20B2AA;">Congratulations!</span> Your meal will be delivered on
               <span style="color:#20b2aa;">08/30/2019</span>
             </p>
           </h4>
-          <h6 style="font-weight:600;opacity:0.9;margin-top:-7px;">Learn more about good eating habits and tips for your condition
+          <h6 style="font-weight:600;margin-top:-7px;">Learn more about good eating habits and tips for your condition
             <a style="text-decoration:underline;" href="https://www.choosemyplate.gov/ten-tips-healthy-eating-for-an-active-lifestyle">here</a>
           </h6>
         </footer>
