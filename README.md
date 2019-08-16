@@ -2,7 +2,7 @@ Project WELL
 
 --------------------------------------------------------------------------------
 
-For Access:
+For Access: (Please use Google Chrome)
 
 https://fathomless-fortress-80147.herokuapp.com/login
 Username: Nicole
