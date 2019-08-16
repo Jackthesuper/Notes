@@ -182,8 +182,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 17px;
-  width: 15px;
+  height: 13px;
+  width: 12px;
   background-color: #eee;
 }
 
@@ -206,8 +206,8 @@
 
 /* Style the checkmark/indicator */
 .cb .checkmark:after {
-  left: 5px;
-  top: 4px;
+  left: 4px;
+  top: 2px;
   width: 5px;
   height: 8px;
   border: solid white;
@@ -251,8 +251,8 @@ display: block;
 
 /* Style the checkmark/indicator */
 .cb2 .checkmark:after {
-left: 5px;
-top: 4px;
+left: 4px;
+top: 2px;
 width: 5px;
 height: 8px;
 border: solid white;
@@ -306,6 +306,98 @@ transform: rotate(45deg);
   margin-top: auto;
   margin-bottom: auto;
 }
+
+#grad1 {
+    height: 30px;
+	position: relative;
+	border-radius: 50px;
+    background: -webkit-linear-gradient(left, red , blue); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, red, blue); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, red, blue); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, orangered , orange,  #20b2aa); /* 标准的语法（必须放在最后） */
+}
+
+.numberCircle1 {
+    left: 600px;
+    top: 11px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    border: none;
+    background-color: #20b2aa;
+    color: white;
+    display: inline-block;
+}
+
+.numberCircle2 {
+    left: 400px;
+    top: 11px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    border: none;
+    background-color: darkgrey;
+    color: white;
+    display: inline-block;
+}
+
+.dot1 {
+  height: 10px;
+  width: 10px;
+  top: 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+.dot2 {
+  height: 10px;
+  width: 10px;
+  top: 3px;
+  background-color: #20b2aa;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  left: 11px;
+  top: 35px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-top: 16px solid #20b2aa;
+}
+
+.arrow-down2 {
+  width: 0;
+  height: 0;
+  left: 11px;
+  top: 35px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+
+  border-top: 16px solid darkgrey;
+}
+
+.arrow-down3 {
+  top: -3px;
+  width: 0;
+  height: 0;
+  top: 0px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+
+  border-top: 10px solid white;
+}
+
   </style>
   </head>
   <body>
@@ -388,152 +480,173 @@ transform: rotate(45deg);
       </div>
       <div class="innerMain" style="width:95%">
         <h4 style="background-color: #20B2AA; padding: 10px; color: white;">Nutrition Information for your weekly order:</h4>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col" class="op">Nutritions</th>
-              <th scope="col" class="op">Your needs</th>
-              <th scope="col" class="op">Your meals</th>
-              <th scope="col" class="op"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Total calories</td>
-              <td>7000cal</td>
-              <td>7010cal</td>
-              <td>
-                <label class="cb">
-                <input type="checkbox" checked="checked" onclick="return false;">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td>Protein</td>
-              <td>390g</td>
-              <td>350g</td>
-              <td>
-                <label class="cb2">
-                <input type="checkbox" checked="checked" onclick="return false;">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td>Fats</td>
-              <td>308g</td>
-              <td>300g</td>
-              <td>
-                <label class="cb">
-                <input type="checkbox" checked="checked" onclick="return false;">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td>Sugars</td>
-              <td>102g</td>
-              <td>100g</td>
-              <td>
-                <label class="cb">
-                <input type="checkbox" checked="checked" onclick="return false;">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td>Fiber</td>
-              <td>175g</td>
-              <td>150g</td>
-              <td>
-                <label class="cb2">
-                <input type="checkbox" checked="checked" onclick="return false;">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td>Cholesterol</td>
-              <td>1.4g</td>
-              <td>1.3g</td>
-              <td>
-                <label class="cb">
-                <input type="checkbox" checked="checked" onclick="return false;">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td>Sodium</td>
-              <td>10.5g</td>
-              <td>10g</td>
-              <td>
-                <label class="cb">
-                <input type="checkbox" checked="checked" onclick="return false;">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td>Micronutrients</td>
-              <td>-</td>
-              <td>-</td>
-              <td>
-                <label class="cb">
-                <input type="checkbox" checked="checked" onclick="return false;">
-                <span class="checkmark"></span>
-                </label>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Good eater meter</h4>
-        <br><br>
-        <div class="row">
-          <div class="col-lg-4" style="height:30px;">
-            <div class="progress" style="height: 20px;width:100%;margin-bottom:10px;">
-              <div class="progress-bar progress-bar-danger" role="progressbar"
-               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-               style="width: 100%;">
-              </div>
-            </div>
-            <p style="opacity:0.5;">80%</p>
+        <div class="row" style="font-size:x-small;font-weight:500;">
+          <div class="col-md-6">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" class="op">Nutritions</th>
+                  <th scope="col" class="op">Your needs</th>
+                  <th scope="col" class="op">Your meals</th>
+                  <th scope="col" class="op"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Total calories</td>
+                  <td>7000cal</td>
+                  <td>7010cal</td>
+                  <td>
+                    <label class="cb">
+                    <input type="checkbox" checked="checked" onclick="return false;">
+                    <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Protein</td>
+                  <td>390g</td>
+                  <td>350g</td>
+                  <td>
+                    <label class="cb2">
+                    <input type="checkbox" checked="checked" onclick="return false;">
+                    <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Fats</td>
+                  <td>308g</td>
+                  <td>300g</td>
+                  <td>
+                    <label class="cb">
+                    <input type="checkbox" checked="checked" onclick="return false;">
+                    <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sugars</td>
+                  <td>102g</td>
+                  <td>100g</td>
+                  <td>
+                    <label class="cb">
+                    <input type="checkbox" checked="checked" onclick="return false;">
+                    <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="col-lg-4" style="height:30px;">
-            <div class="progress" style="height: 20px;width:100%">
-              <div class="progress-bar progress-bar-warning" role="progressbar"
-               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-               style="width: 100%;">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4" style="height:30px;">
-            <div class="progress" style="height: 20px;width:100%;margin-bottom:10px;">
-              <div class="progress-bar progress-bar-info" role="progressbar"
-               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
-               style="width: 100%;">
-              </div>
-            </div>
-            <p style="opacity:0.5;float:right;">100%</p>
+          <div class="col-md-6">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col" class="op">Nutritions</th>
+                  <th scope="col" class="op">Your needs</th>
+                  <th scope="col" class="op">Your meals</th>
+                  <th scope="col" class="op"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fiber</td>
+                  <td>175g</td>
+                  <td>150g</td>
+                  <td>
+                    <label class="cb2">
+                    <input type="checkbox" checked="checked" onclick="return false;">
+                    <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Cholesterol</td>
+                  <td>1.4g</td>
+                  <td>1.3g</td>
+                  <td>
+                    <label class="cb">
+                    <input type="checkbox" checked="checked" onclick="return false;">
+                    <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Sodium</td>
+                  <td>10.5g</td>
+                  <td>10g</td>
+                  <td>
+                    <label class="cb">
+                    <input type="checkbox" checked="checked" onclick="return false;">
+                    <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Micronutrients</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>
+                    <label class="cb">
+                    <input type="checkbox" checked="checked" onclick="return false;">
+                    <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
+        <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Good eater meter</h4>
+        <br>
+        <div class="numberCircle1" style="position:relative;">92%
+          <div class="arrow-down" style="position:absolute"></div>
+        </div>
+        <div class="numberCircle2" style="position:relative;">88%
+          <div class="arrow-down2" style="position:absolute"></div>
+        </div>
+
         <div class="row">
-          <div class="col-lg-4" style="text-align:center;">
-            <h4>Good</h4>
+          <div class="col-lg-4">
+            <p style="opacity:0.7;margin: 0px 0 5px;font-size:smaller">70%</p>
           </div>
-          <div class="col-lg-4" style="text-align:center;">
-            <h4>Very good</h4>
+          <div class="col-lg-4">
           </div>
-          <div class="col-lg-4" style="text-align:center;">
-            <h4 style="font-weight: bold;">Perfect!</h4>
+          <div class="col-lg-4">
+            <p style="opacity:0.7;float:right; margin: 0px 0 5px;font-size:smaller;">100%</p>
+          </div>
+        </div>
+
+
+        <div id="grad1" style="position:relative">
+          <div class="arrow-down3" style="position:absolute; left:458px;"></div>
+          <div class="arrow-down3" style="position:absolute; left:614px;"></div>
+        	<div class="row">
+            <div class="col-sm-4" style="text-align:left;color:white;">
+              <h4 style="margin-left:30px; margin-top:9px;font-size:small;">GOOD</h4>
+            </div>
+            <div class="col-sm-4" style="text-align:center;color:white;">
+              <h4 style="margin-top:9px;font-size:small;">VERY GOOD</h4>
+            </div>
+            <div class="col-sm-4" style="text-align:right;color:white;">
+              <h4 style="margin-right:30px;margin-top:9px;font-size:small;font-weight: bold;">PERFECT!</h4>
+            </div>
           </div>
         </div>
         <br>
+        <div class="row" style="position:relative">
+          <div class="dot1" style="right:280px"></div>
+          <p style="font-size:smaller;position:absolute;right:180px;font-weight:500">Previous weeks</p>
+          <div class="dot2" style="right:140px"></div>
+          <p style="font-size:smaller;position:absolute;right:30px;font-weight:500">This week's order</p>
+        </div>
+
+        <br>
         <footer class="container-fluid" style="text-align:center;padding:0px;">
-          <h4 style="font-weight:600;background-color:whitesmoke;padding:20px 85px;margin-bottom:20px;">
-            <img style="height:20%; float:left; width:10%; margin-right:-22px; margin-left:7px;margin-top:-10px;" src="images/food_icon.png">
-            <p style="margin-top: 8px; margin-right: 0px;">
+          <h4 style="font-weight:600;background-color:whitesmoke;padding:25px 85px;margin-bottom:35px;margin-top:30px">
+            <img style="height:20%; float:left; width:10%; margin-right:-22px; margin-left:7px;margin-top:-12px;" src="images/food_icon.png">
+            <p style="margin-top: 8px; margin-right: 0px;font-weight:700">
               <span style="color:#20B2AA;">Congratulations!</span> Your meal will be delivered on
               <span style="color:#20b2aa;">08/30/2019</span>
             </p>
