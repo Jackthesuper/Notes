@@ -115,6 +115,7 @@
     padding: 3%;
     position: fixed;
     padding-top: 1%;
+    height: 100%;
   }
 
   /* Main column */
@@ -355,7 +356,7 @@ transform: rotate(45deg);
 
 .numberCircle1 {
     left: 80%;
-    top: 11px;
+    top: 9px;
     width: 40px;
     line-height: 40px;
     border-radius: 50%;
@@ -369,7 +370,7 @@ transform: rotate(45deg);
 
 .numberCircle2 {
     left: 60%;
-    top: 11px;
+    top: 9px;
     width: 40px;
     line-height: 40px;
     border-radius: 50%;
@@ -636,13 +637,14 @@ transform: rotate(45deg);
         </div>
         <h4 style="background-color: #20B2AA;padding: 10px;color: white;">Good eater meter</h4>
         <br>
-        <div class="numberCircle1" style="position:relative;">92%
-          <div class="arrow-down" style="position:absolute"></div>
+        <div class="row">
+          <div class="numberCircle1" style="position:relative;">92%
+            <div class="arrow-down" style="position:absolute"></div>
+          </div>
+          <div class="numberCircle2" style="position:relative;">88%
+            <div class="arrow-down2" style="position:absolute"></div>
+          </div>
         </div>
-        <div class="numberCircle2" style="position:relative;">88%
-          <div class="arrow-down2" style="position:absolute"></div>
-        </div>
-
         <div class="row">
           <div class="col-lg-4">
             <p style="opacity:0.7;margin: 0px 0 5px;font-size:smaller">70%</p>
@@ -656,8 +658,8 @@ transform: rotate(45deg);
 
 
         <div id="grad1" style="position:relative">
-          <div class="arrow-down3" style="position:absolute; left:65.6%;"></div>
-          <div class="arrow-down3" style="position:absolute; left:81.4%;"></div>
+          <!-- <div class="arrow-down3" style="position:absolute; left:60%;"></div>
+          <div class="arrow-down3" style="position:absolute; left:80%;"></div> -->
         	<div class="row">
             <div class="col-sm-4" style="text-align:left;color:white;">
               <h4 style="margin-left:30px; margin-top:9px;font-size:small;color: white;">GOOD</h4>
@@ -680,12 +682,12 @@ transform: rotate(45deg);
 
         <br>
         <footer class="container-fluid" style="text-align:center;padding:0px;">
-          <h4 style="font-weight:600;background-color:whitesmoke;padding:25px 85px;margin-bottom:35px;margin-top:30px">
-            <img style="float:left; width:8%; margin-right:-22px; margin-left:96px;margin-top:-13px;" src="images/food_icon.png">
-            <p style="margin-top: 8px; margin-right: 0px;font-weight:700;font-size:larger">
-              <span style="color:#20B2AA;">Congratulations!</span> Your meal will be delivered on
-              <span style="color:#20b2aa;">08/30/2019</span>
-            </p>
+          <h4 style="display:inline-block;font-weight:600;background-color:whitesmoke;padding:10px 85px;margin-bottom:35px;margin-top:30px;width:100%;">
+              <img style="float:left; width:13%;margin-left:5%;" src="images/food_icon.png">
+              <p style="font-weight:700;font-size:larger;margin-top:5%;">
+                <span style="color:#20B2AA;">Congratulations!</span> Your meal will be delivered on
+                <span style="color:#20b2aa;">08/30/2019</span>
+              </p>
           </h4>
           <h6 style="font-weight:600;margin-top:-7px;">Learn more about good eating habits and tips for your condition
             <a style="text-decoration:underline;" href="https://www.choosemyplate.gov/ten-tips-healthy-eating-for-an-active-lifestyle">here</a>
