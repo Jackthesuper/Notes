@@ -26,7 +26,7 @@ Template.register.events({
               aa: 0
             }
             Meteor.call("insertMeals", meals);
-            Router.go('/well6');
+            Router.go('/intro');
           }
         });
     }
