@@ -14,7 +14,7 @@
     "bcrypt": "^3.0.6",
     "bootstrap": "^4.3.1",
     "bootstrap-select": "^1.13.10",
-    "grunt": "^1.0.4",
+    "grunt": "^1.5.3",
     "jquery": "^3.4.1",
     "load-grunt-tasks": "^5.1.0",
     "mem": "^5.1.1",
